@@ -1,10 +1,6 @@
 import React from 'react';
-import './App.css';
+import Splash from './components/Splash';
 
-const App = () => (
-  <div>
-    App
-  </div>
-);
+const App = () => (<Splash />);
 
 export default App;

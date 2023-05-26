@@ -1,0 +1,24 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #EFD09E;
+}
+
+.text {
+    color: #98473E;
+}
+
+.heading {
+    composes: text;
+    font-size: 7rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+}
+
+.subheading {
+    composes: text;
+    font-size: 1.25rem;
+}
