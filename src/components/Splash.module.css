@@ -1,14 +1,17 @@
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #EFD09E;
+@keyframes fade {
+    0%,
+    100% {
+        opacity: 0
+    }
+
+    50% {
+        opacity: 1
+    }
 }
 
 .text {
     color: #98473E;
+    animation: fade 2.5s linear;
 }
 
 .heading {
