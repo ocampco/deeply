@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
+import shuffle from 'lodash/shuffle';
+import drop from 'lodash/drop';
 import { useParams } from 'react-router-dom';
 import fixture from '../fixture';
 import styles from './Question.module.css';
@@ -6,23 +8,47 @@ import styles from './Question.module.css';
 // TODO: Pull from db
 // TODO: Randomise questions
 // TODO: Use Link component for routing
-const Question = () => {
-    const { difficulty } = useParams();
-    const questions = fixture[difficulty]; 
+const Question = ({ question, onClick }) => (
+    <>
+        <div className={styles.question}>
+            {question}
+        </div>
+        <button
+            type='button'
+            className={styles.button}
+            onClick={onClick}
+        >
+            next question
+        </button>
+    </>
+);
 
-    return (
-        <>
-            <div className={styles.question}>
-                {questions[0]}
-            </div>
-            <button
-                type='button'
-                className={styles.button}
-            >
-                next question
-            </button>
-        </>
-    )
+const getQuestions = (difficulty) => {
+    const questions = fixture[difficulty];
+
+    return shuffle(questions)
 };
 
-export default Question;
+const setNextQuestion = (
+    questionList,
+    setQuestionList,
+) => {
+    const newQuestionList = drop(questionList);
+    setQuestionList(newQuestionList);
+}
+
+
+const QuestionContainer = () => {
+    const { difficulty } = useParams();
+    const questions = getQuestions(difficulty);
+    const [questionList, setQuestionList] = useState(questions)
+
+    return (
+        <Question
+            question={questionList[0]}
+            onClick={() => setNextQuestion(questionList, setQuestionList)}
+        />
+    )
+}
+
+export default QuestionContainer;
