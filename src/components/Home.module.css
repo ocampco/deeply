@@ -9,7 +9,12 @@
 
 .heading {
     composes: text;
+    font-size: 6rem;
     margin-bottom: 1.5rem;
+
+    @media (min-width: 420px) {
+        font-size: 7rem;
+    }
 }
 
 .subheading {
@@ -18,5 +23,16 @@
 }
 
 .button {
-    composes: text
+    composes: text;
+    width: fit-content;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    box-shadow: -0.25rem 0.25rem var(--default-secondary-grey);
+    padding: 1rem 2rem;
+}
+
+.buttonText {
+    composes: text;
+    font-size: 1.25rem;
+    font-weight: 700;
 }

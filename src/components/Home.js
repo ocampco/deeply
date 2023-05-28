@@ -8,14 +8,17 @@ const Home = () => (
         <h1 className={styles.heading}>
             deeply
         </h1>
-        <h3 className={styles.subheading}>
+        <h2 className={styles.subheading}>
             meaningful questions, better connections
-        </h3>
-        <Link to={PATH_DIFFICULTY}>
-            <div className={styles.button}>
+        </h2>
+        <div className={styles.button}>
+            <Link
+                to={PATH_DIFFICULTY}
+                className={styles.buttonText}
+            >
                 start
-            </div>
-        </Link>
+            </Link>
+        </div>
     </>
 );
 

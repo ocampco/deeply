@@ -1,25 +1,44 @@
 .heading {
-    align-self: flex-start;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
+
+    /* TODO: Use var for width */
+    @media (min-width: 640px) {
+        margin-bottom: 2rem;
+    }
 }
 
 .levels {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    
+    @media (min-width: 640px) {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
 }
 
 .level {
-    max-width: 10rem;
-    height: 100%;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
     padding: 1.5rem 1rem;
+    margin-bottom: 1.5rem;
+    box-shadow: -0.25rem 0.25rem var(--default-secondary-grey);
+
+    @media (min-width: 640px) {
+        max-width: 10rem;
+        margin-bottom: 0;
+    }
 }
 
 .name {
+    font-weight: 700;
+    font-size: 1.25rem;
     margin-bottom: 1rem;
 }
 
 .description {
+    color: var(--default-primary-grey);
     font-style: italic;
 }

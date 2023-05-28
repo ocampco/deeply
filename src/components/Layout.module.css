@@ -1,6 +1,6 @@
 .container {
     height: 100vh;
-    background-color: var(--default-secondary-color);
+    background-color: var(--default-primary-beige);
     padding: 2rem 1rem;
     box-sizing: border-box;
 }
@@ -8,7 +8,6 @@
 .content {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     height: 100%;
     max-width: 600px;

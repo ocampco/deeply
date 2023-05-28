@@ -4,36 +4,36 @@ import difficultyLevels from '../constants/difficultyLevels';
 import styles from './Difficulty.module.css';
 
 // TODO: Add question path based on ID
-const DifficultyButton = ({
+const DifficultyLevel = ({
     onClick,
     id,
     displayName,
     description,
 }) => (
-    <Link onClick={() => onClick(id)}>
-        <div className={styles.level}>
-            <h3 className={styles.name}>{displayName}</h3>
+    <li className={styles.level}>
+        <Link onClick={() => onClick(id)}>
+            <h2 className={styles.name}>{displayName}</h2>
             <p className={styles.description}>{description}</p>
-        </div>
-    </Link>
+        </Link>
+    </li>
 );
 
 const Difficulty = ({ setDifficulty }) => (
     <>
-        <h2 className={styles.heading}>
+        <h1 className={styles.heading}>
             how deep would you like to go?
-        </h2>
-        <div className={styles.levels}>
+        </h1>
+        <ul className={styles.levels}>
         { difficultyLevels.map(({ id, displayName, description }) => (
-            <DifficultyButton
-            key={id}
-            onClick={setDifficulty}
-            id={id}
+            <DifficultyLevel
+                key={id}
+                onClick={setDifficulty}
+                id={id}
                 displayName={displayName}
                 description={description}
-                />
+            />
         ))}
-        </div>
+        </ul>
     </>
 );
 

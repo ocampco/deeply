@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap');
 
 :root {
-  --default-primary-color: #98473E;
-  --default-secondary-color: #EFD09E;
+  --default-primary-brown: #98473E;
+  --default-primary-grey: #747474;
+  --default-secondary-grey: #aaaaaa;
+  --default-primary-beige: #EFD09E;
 }
 
 body {
@@ -10,34 +12,22 @@ body {
   font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: var(--default-primary-color);
+  color: var(--default-primary-brown);
 }
 
 h1 {
-  font-size: 7rem;
+  font-size: 3rem;
   font-weight: 700;
 }
 
 h2 {
-  font-size: 2rem;
-  font-weight: 500;
-}
-
-h3 {
   font-size: 1.25rem;
   font-weight: 500;
 }
 
 a {
   text-decoration: none;
-}
-
-a > div {
-  font-weight: 500;
-  background-color: var(--default-primary-color);
-  color: var(--default-secondary-color);
-  border-radius: 0.5rem;
-  padding: 1rem 2rem;
+  color: var(--default-primary-brown);
 }
 
 code {
