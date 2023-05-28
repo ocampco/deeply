@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './Layout.module.css';
 
-const Layout = ({ children }) => (
-    <div className={styles.container}>
+const Layout = ({ isDark, children }) => (
+    <div className={ isDark ? styles.dark : styles.light}>
         <div className={styles.content}>
             { children }
         </div>

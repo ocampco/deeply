@@ -1,8 +1,17 @@
 .container {
     height: 100vh;
-    background-color: var(--default-primary-beige);
     padding: 2rem 1rem;
     box-sizing: border-box;
+}
+
+.dark {
+    composes: container;
+    background-color: var(--default-primary-brown);
+}
+
+.light {
+    composes: container;
+    background-color: var(--default-primary-beige);
 }
 
 .content {
