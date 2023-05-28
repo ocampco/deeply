@@ -8,11 +8,11 @@ const Home = () => (
         <h1 className={styles.heading}>
             deeply
         </h1>
-        <p className={styles.subheading}>
+        <h3 className={styles.subheading}>
             meaningful questions, better connections
-        </p>
+        </h3>
         <Link to={PATH_DIFFICULTY}>
-            <div className={styles.startButton}>
+            <div className={styles.button}>
                 start
             </div>
         </Link>

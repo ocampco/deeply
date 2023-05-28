@@ -1,19 +1,19 @@
 const CASUAL = {
     id: 'casual',
-    displayName: 'Casual',
-    description: 'Start the conversation and try something new',
+    displayName: '\u{1f973} casual',
+    description: 'start the conversation and try something new',
 };
 
 const INTIMATE = {
     id: 'intimate',
-    displayName: 'Intimate',
-    description: 'Come out of your shell',
+    displayName: '\u{1f92b} intimate',
+    description: 'come out of your shell',
 };
 
 const CONTRAVERSIAL = {
     id: 'contraversial',
-    displayName: 'Contraversial',
-    description: 'Questions that raise more questions',
+    displayName: '\u{1f628} contraversial',
+    description: 'questions that raise more questions',
 };
 
 const difficultyLevels = [CASUAL, INTIMATE, CONTRAVERSIAL];

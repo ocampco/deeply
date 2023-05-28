@@ -1,0 +1,25 @@
+.heading {
+    align-self: flex-start;
+    margin-bottom: 2rem;
+}
+
+.levels {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.level {
+    max-width: 10rem;
+    height: 100%;
+    padding: 1.5rem 1rem;
+}
+
+.name {
+    margin-bottom: 1rem;
+}
+
+.description {
+    font-style: italic;
+}
