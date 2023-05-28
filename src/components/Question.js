@@ -37,11 +37,10 @@ const setNextQuestion = (
     setQuestionList(newQuestionList);
 }
 
-
 const QuestionContainer = () => {
     const { difficulty } = useParams();
     const questions = getQuestions(difficulty);
-    const [questionList, setQuestionList] = useState(questions)
+    const [questionList, setQuestionList] = useState(questions);
 
     return (
         <Question
