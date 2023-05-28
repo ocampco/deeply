@@ -1,8 +1,7 @@
 {
   "name": "deeply",
   "version": "0.1.0",
-  "private": true,
-  "homepage": "https://ocampco.github.io/deeply/",
+  "homepage": "https://ocampco.github.io/deeply",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
