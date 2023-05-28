@@ -10,7 +10,10 @@ import routes from './constants/routes';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 
-const router = createBrowserRouter(routes);
+const router = createBrowserRouter(
+    routes,
+    { basename: '/deeply' },
+  );
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
