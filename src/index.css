@@ -5,6 +5,11 @@ body {
   font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #98473E;
+}
+
+a {
+  text-decoration: none;
 }
 
 code {

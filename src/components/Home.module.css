@@ -1,0 +1,37 @@
+@keyframes fade {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+.text {
+    animation: fade 2.5s ease-in;
+}
+
+.heading {
+    composes: text;
+    font-size: 7rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.subheading {
+    composes: text;
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+/* TODO: Use global colours */
+.startButton {
+    composes: text;
+    padding: 1rem 2rem;
+    font-weight: 500;
+    font-size: 1.25rem;
+    background-color: #98473E;
+    color: #EFD09E;
+    border-radius: 0.5rem;
+}
