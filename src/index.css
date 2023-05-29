@@ -5,6 +5,7 @@
   --default-primary-grey: #747474;
   --default-secondary-grey: #aaaaaa;
   --default-primary-beige: #EFD09E;
+  --default-paragraph-line-height: 1.5;
 }
 
 body {

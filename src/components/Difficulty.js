@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import difficultyLevels from '../constants/difficultyLevels';
-import { PATH_QUESTION_SEGMENT } from '../constants/routes';
+import { PATH_INSTRUCTIONS } from '../constants/routes';
 import styles from './Difficulty.module.css';
 
 // TODO: Add question path based on ID
@@ -11,7 +11,10 @@ const DifficultyLevel = ({
     description,
 }) => (
     <li className={styles.level}>
-        <Link to={`${PATH_QUESTION_SEGMENT}/${url}`}>
+        <Link
+            to={PATH_INSTRUCTIONS}
+            state={{ difficulty: url }}
+        >
             <h2 className={styles.name}>{displayName}</h2>
             <p className={styles.description}>{description}</p>
         </Link>
