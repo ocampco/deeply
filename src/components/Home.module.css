@@ -5,11 +5,12 @@
 
 .text {
     animation: fade 2.5s ease-in;
+    text-align: center;
 }
 
 .heading {
     composes: text;
-    font-size: 6rem;
+    font-size: 5.5rem;
     margin-bottom: 1.5rem;
 
     @media (min-width: 420px) {
@@ -24,6 +25,7 @@
 
 .button {
     composes: text;
+    margin: 0 auto;
     width: fit-content;
     background-color: #ffffff;
     border-radius: 0.5rem;
