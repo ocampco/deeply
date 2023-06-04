@@ -1,0 +1,58 @@
+.heading {
+    margin-bottom: 2rem;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    
+    @media (min-width: 560px) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.button {
+    border-radius: 0.5rem;
+    padding: 1rem 2rem;
+    width: fit-content;
+    height: fit-content;
+}
+
+.donate {
+    composes: button;
+    background-color: var(--default-primary-brown);
+    margin-bottom: 2rem;
+
+    @media (min-width: 560px) {
+        max-width: 16rem;
+        margin-bottom: 0;
+    }
+}
+
+.restart {
+    composes: button;
+    background-color: #ffffff;
+    box-shadow: -0.25rem 0.25rem var(--default-secondary-grey);
+}
+
+.buttonText {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.title {
+    composes: buttonText;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.description {
+    color: #ffffff;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+.underline {
+    text-decoration: underline;
+}
