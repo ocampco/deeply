@@ -23,7 +23,7 @@ const Summary = () => (
                         did you like the game?
                     </h2>
                     <p className={styles.description}>
-                        if you'd like to help me make this app better, you can <p className={styles.underline}>buy me a coffee</p>
+                        if you'd like to help me make this app better, you can <span className={styles.underline}>buy me a coffee</span>
                     </p>
                 </a>
             </div>
