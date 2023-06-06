@@ -1,35 +1,40 @@
 import React, { useState } from 'react';
 import shuffle from 'lodash/shuffle';
 import drop from 'lodash/drop';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import fixture from '../fixture';
+import { PATH_SUMMARY } from '../constants/routes';
 import styles from './Question.module.css';
 
-// TODO: Pull from db
-// TODO: Randomise questions
+const QUESTION_BUTTON_TEXT = 'next question';
+
 // TODO: Use Link component for routing
-const Question = ({ question, onClick }) => (
-    <>
-        <div className={styles.question}>
-            {question}
-        </div>
-        <button
-            type='button'
-            className={styles.button}
-            onClick={onClick}
-        >
-            next question
-        </button>
-    </>
+// TODO: Pull from db
+const QuestionButton = ({ clickFn }) => (
+    <button
+        type='button'
+        className={styles.button}
+        onClick={clickFn}
+    >
+        {QUESTION_BUTTON_TEXT}
+    </button>
 );
 
-const getQuestions = (difficulty) => {
-    const questions = fixture[difficulty];
+const SummaryButton = () => (
+    <div className={styles.button}>
+        <Link to={PATH_SUMMARY}>
+            {QUESTION_BUTTON_TEXT}
+        </Link>
+    </div>
+);
 
-    return shuffle(questions)
-};
+const getShuffledQuestions = (questionList, difficulty) => {
+    const questions = questionList[difficulty];
 
-const setNextQuestion = (
+    return shuffle(questions);
+}
+
+const updateQuestionList = (
     questionList,
     setQuestionList,
 ) => {
@@ -37,17 +42,24 @@ const setNextQuestion = (
     setQuestionList(newQuestionList);
 }
 
-const QuestionContainer = () => {
+const Question = () => {
     const { difficulty } = useParams();
-    const questions = getQuestions(difficulty);
+    const questions = getShuffledQuestions(fixture, difficulty);
     const [questionList, setQuestionList] = useState(questions);
+    const hasQuestions = questionList.length > 1;
 
     return (
-        <Question
-            question={questionList[0]}
-            onClick={() => setNextQuestion(questionList, setQuestionList)}
-        />
+        <>
+            <div className={styles.question}>
+                {questionList[0]}
+            </div>
+            { hasQuestions
+                ? <QuestionButton clickFn={() => updateQuestionList(questionList, setQuestionList)} />
+                : <SummaryButton />
+            }
+
+        </>
     )
 }
 
-export default QuestionContainer;
+export default Question;
