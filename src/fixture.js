@@ -11,6 +11,7 @@ const casual = [
     'on the count of 3, hold up the number of fingers of people in the circle you think will be alive in 20 years.',
     'on the count of 3, point to the person who would be the most generous if they won the lottery.',
     'on the count of 3, hold up the number of fingers of people in the circle you think will be a completely different person in 3 years.',
+    'what was the best era of your life and why?',
 ];
 
 const intimate = [
@@ -18,6 +19,10 @@ const intimate = [
     'your life is a sail boat. describe the anchors holding you down.',
     'your life is a sail boat. describe the wind keeping you sailing.',
     'what do you think everyone\'s biggest achievement was from your perspective? go around the circle.',
+    'on the count of 3, raise your hand if you ever lied about when you lost your virginity. those with hands raised must talk about it.',
+    'when was the last time you experienced real depression? speak on it if you wish.',
+    'what is a quote that has got you through a hard time?',
+    'what baggage do you think you carry?',
 ];
 
 const controversial = [
@@ -27,13 +32,29 @@ const controversial = [
     'what was your last regret? go around the circle.',
     'on the count of 3, raise your hand if you had one that got away. those with hands raised must talk about it.',
     'on the count of 3, raise your hand if you agree with anything the world\'s biggest villains actions e.g. hitler, kim jong un. those with hands raised must talk about it.',
-    'on the count of 3, point to the person most likely to try something with a friend\'s partner',
+    'on the count of 3, point to the person most likely to try something with a friend\'s partner.',
+    'do you ever worry about hereditary health issues? have you done anything to check? if you haven\'t checked, explain why.',
 ];
+
+const memories = [
+    'when was the first time you remember drinking?',
+    'when was the first time you got wasted?',
+    'who was your first crush on a famous person?',
+    'what was the first movie you obsessed over?',
+    'what was the last time you went to the doctor? if it has been a while, what is stopping you?',
+    'when was the last time you punched someone in the face?',
+    'when was the last time you said \'i love you\' to a family member? if you haven\'t, explain why',
+    'in an ideal world, what would you want your last words to be?',
+    'what was the last thing you were and not currently addicted to?',
+    'when was the last time you truly decompressed? if you haven\t, what is stopping you?',
+    'when was the last time you recognised how beautiful and unique of a person you are?',
+]
 
 const questions = {
     casual,
     intimate,
     controversial,
+    memories,
 };
 
 export default questions;
