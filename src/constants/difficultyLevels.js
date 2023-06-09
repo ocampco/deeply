@@ -19,6 +19,19 @@ const CONTROVERSIAL = {
     description: 'questions that raise more questions',
 };
 
-const difficultyLevels = [CASUAL, INTIMATE, CONTROVERSIAL];
+// TODO: Find suitable emoji
+const MEMORIES = {
+    url: 'memories',
+    displayName: 'memories',
+    emoji: '\u{1f628}',
+    description: 'reflect on your first and last times',
+};
+
+const difficultyLevels = [
+    CASUAL,
+    INTIMATE,
+    CONTROVERSIAL,
+    MEMORIES,
+];
 
 export default difficultyLevels;
