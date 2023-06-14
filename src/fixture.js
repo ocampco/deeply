@@ -23,6 +23,7 @@ const intimate = [
     'when was the last time you experienced real depression? speak on it if you wish.',
     'what is a quote that has got you through a hard time?',
     'what baggage do you think you carry?',
+    'if your personality could be described with a colour, what colour would that be?',
 ];
 
 const controversial = [
@@ -43,10 +44,10 @@ const memories = [
     'what was the first movie you obsessed over?',
     'what was the last time you went to the doctor? if it has been a while, what is stopping you?',
     'when was the last time you punched someone in the face?',
-    'when was the last time you said \'i love you\' to a family member? if you haven\'t, explain why',
+    'when was the last time you said \'i love you\' to a family member? if you haven\'t, explain why.',
     'in an ideal world, what would you want your last words to be?',
     'what was the last thing you were and not currently addicted to?',
-    'when was the last time you truly decompressed? if you haven\t, what is stopping you?',
+    'when was the last time you truly decompressed? if you haven\'t, what is stopping you?',
     'when was the last time you recognised how beautiful and unique of a person you are?',
 ]
 
