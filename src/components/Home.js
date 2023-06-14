@@ -12,10 +12,7 @@ const Home = () => (
             meaningful questions, better connections
         </h2>
         <div className={styles.link}>
-            <Link
-                to={PATH_DIFFICULTY}
-                className={styles.linkText}
-            >
+            <Link to={PATH_DIFFICULTY}>
                 start
             </Link>
         </div>
