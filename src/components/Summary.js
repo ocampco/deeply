@@ -11,7 +11,7 @@ const Summary = () => (
         <h1 className={styles.heading}>
             thanks for playing
         </h1>
-        <div className={styles.buttons}>
+        <div className={styles.actions}>
             <div className={styles.donate}>
                 <a
                     href={PATH_DONATE}
@@ -23,7 +23,10 @@ const Summary = () => (
                         did you like the game?
                     </h2>
                     <p className={styles.description}>
-                        if you'd like to help me make this app better, you can <span className={styles.underline}>buy me a coffee</span>
+                        if you'd like to help me make this app better, you can
+                        <p className={styles.underline}>
+                            buy me a coffee
+                        </p>
                     </p>
                 </a>
             </div>

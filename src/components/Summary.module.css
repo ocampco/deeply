@@ -2,7 +2,7 @@
     margin-bottom: 2rem;
 }
 
-.buttons {
+.actions {
     display: flex;
     flex-direction: column;
     
@@ -12,16 +12,16 @@
     }
 }
 
-.button {
+.rounded {
     border-radius: 0.5rem;
-    padding: 1rem 2rem;
     width: fit-content;
     height: fit-content;
 }
 
 .donate {
-    composes: button;
+    composes: rounded;
     background-color: var(--default-primary-brown);
+    padding: 1.5rem;
     margin-bottom: 2rem;
 
     @media (min-width: 560px) {
@@ -32,9 +32,15 @@
 }
 
 .restart {
-    composes: button;
+    composes: rounded;
+    padding: 1rem 2rem;
     background-color: #ffffff;
     box-shadow: -0.25rem 0.25rem var(--default-secondary-grey);
+    align-self: flex-end;
+    
+    @media (min-width: 560px) {
+        align-self: auto;
+    }
 }
 
 .buttonText {
