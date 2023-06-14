@@ -1,16 +1,9 @@
-.heading {
-    margin-bottom: 1.5rem;
-}
-
 .list {
-    font-size: 1.25rem;
-    font-style: italic;
-    font-weight: 500;
-    line-height: var(--default-paragraph-line-height);
     margin-bottom: 2rem;
 }
 
 .item {
+    line-height: var(--default-line-height);
     list-style: inside;
     list-style-position: outside;
     margin-left: 1.5rem;
@@ -21,27 +14,12 @@
     margin-bottom: 0;
 }
 
-@keyframes fade {
-    0% { opacity: 0 }
-    100% { opacity: 1 }
-}
-
-.action {
-    animation: fade 2.5s ease-in;
-}
-
 .emphasis {
-    font-weight: 700;
+    font-style: italic;
 }
 
 .button {
-    composes: action;
-    background-color: #ffffff;
-    border-radius: 0.5rem;
-    box-shadow: -0.25rem 0.25rem var(--default-secondary-grey);
-    padding: 1rem 2rem;
-    font-size: 1.25rem;
-    font-weight: 700;
-    width: fit-content;
+    composes: animate from '../styles/constants.module.css';
+    composes: button from '../styles/constants.module.css';
     margin: 0 auto;
 }

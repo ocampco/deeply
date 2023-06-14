@@ -11,10 +11,10 @@ const Home = () => (
         <h2 className={styles.subheading}>
             meaningful questions, better connections
         </h2>
-        <div className={styles.button}>
+        <div className={styles.link}>
             <Link
                 to={PATH_DIFFICULTY}
-                className={styles.buttonText}
+                className={styles.linkText}
             >
                 start
             </Link>

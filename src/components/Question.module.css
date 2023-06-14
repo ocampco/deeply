@@ -1,20 +1,12 @@
 .question {
     font-size: 2rem;
-    font-weight: 700;
-    line-height: var(--default-paragraph-line-height);
-    margin-bottom: 2rem;
-    color: var(--default-primary-beige);
+    line-height: var(--default-line-height);
 }
 
+/* TODO: Refactor when moved to Link component */
 .button {
-    width: fit-content;
-    background-color: #ffffff;
+    composes: button from '../styles/constants.module.css';
     border: none;
-    border-radius: 0.5rem;
-    box-shadow: -0.25rem 0.25rem var(--default-secondary-grey);
-    padding: 1rem 2rem;
-    font-size: 1.25rem;
-    font-weight: 700;
     color: var(--default-primary-brown);
     align-self: flex-end;
 }

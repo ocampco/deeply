@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: var(--default-primary-brown);
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+a {
+    text-decoration: none;
+    color: var(--default-primary-brown);
+}

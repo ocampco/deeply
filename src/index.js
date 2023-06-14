@@ -4,8 +4,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from 'react-router-dom';
-import './reset.css';
-import './index.css';
+import './styles/index.module.css';
 import routes from './constants/routes';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';

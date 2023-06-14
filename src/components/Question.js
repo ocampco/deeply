@@ -50,9 +50,7 @@ const Question = () => {
 
     return (
         <>
-            <div className={styles.question}>
-                {questionList[0]}
-            </div>
+            <h1 className={styles.question}>{questionList[0]}</h1>
             { hasQuestions
                 ? <QuestionButton clickFn={() => updateQuestionList(questionList, setQuestionList)} />
                 : <SummaryButton />

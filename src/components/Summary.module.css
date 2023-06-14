@@ -1,10 +1,7 @@
-.heading {
-    margin-bottom: 2rem;
-}
-
 .actions {
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
     
     @media (min-width: 560px) {
         flex-direction: row;
@@ -12,16 +9,7 @@
     }
 }
 
-.rounded {
-    border-radius: 0.5rem;
-    width: fit-content;
-    height: fit-content;
-}
-
 .donate {
-    composes: rounded;
-    background-color: var(--default-primary-brown);
-    padding: 1.5rem;
     margin-bottom: 2rem;
 
     @media (min-width: 560px) {
@@ -31,35 +19,20 @@
     }
 }
 
-.restart {
-    composes: rounded;
-    padding: 1rem 2rem;
-    background-color: #ffffff;
-    box-shadow: -0.25rem 0.25rem var(--default-secondary-grey);
-    align-self: flex-end;
-    
-    @media (min-width: 560px) {
-        align-self: auto;
-    }
-}
-
-.buttonText {
-    font-size: 1.25rem;
-    font-weight: 700;
-}
-
 .title {
-    composes: buttonText;
-    color: #ffffff;
+    font-weight: 700;
     margin-bottom: 1rem;
 }
 
 .description {
-    color: #ffffff;
-    font-style: italic;
-    line-height: 1.5;
+    line-height: var(--default-line-height);
+    margin-bottom: 0.25rem;
 }
 
-.underline {
+.link {
     text-decoration: underline;
+}
+
+.restart {
+    composes: button from '../styles/constants.module.css';
 }

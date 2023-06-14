@@ -23,9 +23,7 @@ const DifficultyLevel = ({
 
 const Difficulty = () => (
     <>
-        <h1 className={styles.heading}>
-            how deep would you like to go?
-        </h1>
+        <h1>how deep would you like to go?</h1>
         <ul className={styles.levels}>
         { difficultyLevels.map(({ url, displayName, description }) => (
             <DifficultyLevel

@@ -8,9 +8,7 @@ const Instructions = () => {
 
     return (
         <>
-            <h1 className={styles.heading}>
-                before you start
-            </h1>
+            <h1>before you start</h1>
             <ul className={styles.list}>
                 <li className={styles.item}>
                     please take your time to think about each answer

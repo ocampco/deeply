@@ -1,0 +1,40 @@
+:root {
+    --default-primary-brown: #98473E;
+    --default-primary-grey: #747474;
+    --default-secondary-grey: #AAAAAA;
+    --default-primary-beige: #EFD09E;
+    --default-primary-white: #FFFFFF;
+    --default-line-height: 1.5;
+    --default-border-radius: 0.5rem;
+    --default-box-shadow: -0.25rem 0.25rem var(--default-secondary-grey);
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+.animate {
+    animation: fade 2.5s ease-in;
+    text-align: center;
+}
+
+.rounded {
+    border-radius: var(--default-border-radius);
+    width: fit-content;
+    height: fit-content;
+}
+        
+.button {
+    composes: rounded;
+    background-color: var(--default-primary-white);
+    box-shadow: var(--default-box-shadow);
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
