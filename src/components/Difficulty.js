@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import difficultyLevels from '../constants/difficultyLevels';
-import { PATH_INSTRUCTIONS } from '../constants/routes';
+import { PATH_INSTRUCTIONS } from '../constants/routeConfig';
 import styles from './Difficulty.module.css';
 
 // TODO: Add question path based on ID

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { PATH_QUESTION_SEGMENT } from '../constants/routes';
+import { PATH_QUESTION_SEGMENT } from '../constants/routeConfig';
 import styles from './Instructions.module.css';
 
 const Instructions = () => {

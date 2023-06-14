@@ -3,7 +3,7 @@ import shuffle from 'lodash/shuffle';
 import drop from 'lodash/drop';
 import { Link, useParams } from 'react-router-dom';
 import fixture from '../fixture';
-import { PATH_SUMMARY } from '../constants/routes';
+import { PATH_SUMMARY } from '../constants/routeConfig';
 import styles from './Question.module.css';
 
 const QUESTION_BUTTON_TEXT = 'next question';
