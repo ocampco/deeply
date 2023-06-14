@@ -9,7 +9,7 @@ const Instructions = () => {
     return (
         <>
             <h1>before you start</h1>
-            <ul className={styles.list}>
+            <ul className={styles.items}>
                 <li className={styles.item}>
                     please take your time to think about each answer
                 </li>

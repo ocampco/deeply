@@ -21,6 +21,7 @@ const Content = styled.div`
     flex-direction: column;
     justify-content: center;
     height: 100%;
+    width: 100%;
     max-width: 600px;
     margin: 0 auto;
 

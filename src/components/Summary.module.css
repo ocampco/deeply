@@ -10,7 +10,7 @@
 }
 
 .donate {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 
     @media (min-width: 560px) {
         max-width: 16rem;

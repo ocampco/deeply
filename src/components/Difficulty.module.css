@@ -29,6 +29,6 @@
 .description {
     color: var(--default-primary-grey);
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 400;
     font-style: italic;
 }
