@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import {
     PATH_DONATE,
     PATH_DIFFICULTY,
-} from '../constants/routeConfig';
+} from '../constants/paths';
 import styles from './Summary.module.css';
 
 const Summary = () => (

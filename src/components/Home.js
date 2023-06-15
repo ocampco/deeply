@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { PATH_DIFFICULTY } from '../constants/routeConfig';
+import { PATH_DIFFICULTY } from '../constants/paths';
 import styles from './Home.module.css';
 
 const Home = () => (
