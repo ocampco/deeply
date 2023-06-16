@@ -24,11 +24,12 @@ const intimate = [
     'what is a quote that has got you through a hard time?',
     'what baggage do you think you carry?',
     'if your personality could be described with a colour, what colour would that be?',
+    'when was the last time you cried? was it a relief or burden?'
 ];
 
 const controversial = [
     'what do you think is someone\'s biggest obstacle?',
-    'what do you think their biggest strength is to overcome their obstacle?',
+    'what do you think their biggest strength is to overcome their obstacles?',
     'on the count of 3, everyone must point at someone in the circle. this person must describe something that their partner or close friends don\'t know they feel.',
     'what was your last regret? go around the circle.',
     'on the count of 3, raise your hand if you had one that got away. those with hands raised must talk about it.',
@@ -49,13 +50,14 @@ const memories = [
     'what was the last thing you were and not currently addicted to?',
     'when was the last time you truly decompressed? if you haven\'t, what is stopping you?',
     'when was the last time you recognised how beautiful and unique of a person you are?',
-]
+];
 
 const questions = {
     casual,
     intimate,
     controversial,
     memories,
+    // family
 };
 
 export default questions;
@@ -65,4 +67,3 @@ export default questions;
 // 'what do you think their biggest strength is to overcome their obstacle?',
 
 // TODO: Multi category
-// when was the last time you cried
