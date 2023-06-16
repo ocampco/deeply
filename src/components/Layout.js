@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import { DEFAULT_THEME } from '../constants/theme';
+import { LIGHT_THEME } from '../constants/theme';
 
 const Container = styled.div`
-    display: ${props => props.theme.display};
+    display: flex;
     background-color: ${props => props.theme.bg};
     color: ${props => props.theme.fg};
     min-height: 100vh;
@@ -16,7 +16,7 @@ const Container = styled.div`
 `;
 
 const Content = styled.div`
-    align-self: ${props => props.theme.align};
+    align-self: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -30,16 +30,12 @@ const Content = styled.div`
     }
 `;
 
-const Layout = ({ themeOverride, children }) => {
-    const theme = { ...DEFAULT_THEME, ...themeOverride };
-
-    return (
-        <Container theme={theme}>
-            <Content theme={theme}>
-                { children }
-            </Content>
-        </Container>
-    )
-};
+const Layout = ({ theme = LIGHT_THEME, children }) => (
+    <Container theme={theme}>
+        <Content>
+            { children }
+        </Content>
+    </Container>
+);
 
 export default Layout;

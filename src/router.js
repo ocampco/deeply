@@ -7,10 +7,10 @@ import routeConfig from './constants/routeConfig';
 import { PATH_BASE } from './constants/paths';
 
 const routes = routeConfig.map(
-    ({ path, Component, themeOverride }) => ({
+    ({ path, Component, theme }) => ({
         path,
         element: (
-            <Layout themeOverride={themeOverride}>
+            <Layout theme={theme}>
                 <Component />
                 <ScrollRestoration />
             </Layout>
