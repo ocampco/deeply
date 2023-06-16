@@ -1,4 +1,7 @@
-import { createBrowserRouter } from 'react-router-dom';
+import {
+    ScrollRestoration,
+    createBrowserRouter,
+} from 'react-router-dom';
 import Layout from './components/Layout';
 import routeConfig from './constants/routeConfig';
 import { PATH_BASE } from './constants/paths';
@@ -9,6 +12,7 @@ const routes = routeConfig.map(
         element: (
             <Layout themeOverride={themeOverride}>
                 <Component />
+                <ScrollRestoration />
             </Layout>
         ),
     })
