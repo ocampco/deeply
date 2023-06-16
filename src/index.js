@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { RouterProvider } from 'react-router-dom';
+import {
+  RouterProvider,
+  ScrollRestoration,
+} from 'react-router-dom';
 import './styles/index.module.css';
 import router from './router';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
@@ -11,6 +14,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <RouterProvider router={router} />
+    <ScrollRestoration />
   </React.StrictMode>
 );
 
