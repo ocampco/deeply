@@ -1,0 +1,1 @@
+export const QUERY_SHOW_PWA = 'show-pwa=true';

@@ -4,6 +4,7 @@ import {
     PATH_DONATE,
     PATH_DIFFICULTY,
 } from '../constants/paths';
+import { QUERY_SHOW_PWA } from '../constants/queries';
 import styles from './Summary.module.css';
 
 const Summary = () => (
@@ -29,7 +30,7 @@ const Summary = () => (
                 </a>
             </div>
             <div className={styles.restart}>
-                <Link to={PATH_DIFFICULTY}>
+                <Link to={`${PATH_DIFFICULTY}?${QUERY_SHOW_PWA}`}>
                     try another
                 </Link>
             </div>
