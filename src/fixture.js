@@ -12,6 +12,7 @@ const casual = [
     'on the count of 3, point to the person who would be the most generous if they won the lottery.',
     'on the count of 3, hold up the number of fingers of people in the circle you think will be a completely different person in 3 years.',
     'what was the best era of your life and why?',
+    'describe your top 3 netflix genres',
 ];
 
 const intimate = [
@@ -24,7 +25,8 @@ const intimate = [
     'what is a quote that has got you through a hard time?',
     'what baggage do you think you carry?',
     'if your personality could be described with a colour, what colour would that be?',
-    'when was the last time you cried? was it a relief or burden?'
+    'when was the last time you cried? was it a relief or burden?',
+    'have you ever experienced deep intuition about anything? tell the story.',
 ];
 
 const controversial = [
@@ -36,6 +38,7 @@ const controversial = [
     'on the count of 3, raise your hand if you agree with anything the world\'s biggest villains actions e.g. hitler, kim jong un. those with hands raised must talk about it.',
     'on the count of 3, point to the person most likely to try something with a friend\'s partner.',
     'do you ever worry about hereditary health issues? have you done anything to check? if you haven\'t checked, explain why.',
+    'has death truly affected the way you do anything?',
 ];
 
 const memories = [
