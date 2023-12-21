@@ -6,7 +6,8 @@ const Container = styled.div`
     display: flex;
     background-color: ${props => props.theme.bg};
     color: ${props => props.theme.fg};
-    min-height: 100vh;
+    height: 100vh;
+    width: 100%;
     padding: 2rem 1.5rem;
     box-sizing: border-box;
 
@@ -19,7 +20,7 @@ const Content = styled.div`
     align-self: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: ${props => props.justify || 'center'};
     height: 100%;
     width: 100%;
     max-width: 600px;
@@ -30,9 +31,9 @@ const Content = styled.div`
     }
 `;
 
-const Layout = ({ theme = LIGHT_THEME, children }) => (
+const Layout = ({ theme = LIGHT_THEME, justify, children }) => (
     <Container theme={theme}>
-        <Content>
+        <Content justify={justify}>
             { children }
         </Content>
     </Container>
