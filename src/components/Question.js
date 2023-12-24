@@ -2,21 +2,13 @@ import React, { useState } from 'react';
 import shuffle from 'lodash/shuffle';
 import drop from 'lodash/drop';
 import { Link, useParams } from 'react-router-dom';
-import fixture from '../fixture';
+import BackLink from './BackLink';
 import { PATH_DIFFICULTY, PATH_SUMMARY } from '../constants/paths';
+import fixture from '../fixture';
 import styles from './Question.module.css';
 
-const DIFFICULTY_BUTTON_TEXT = '< change category';
+const DIFFICULTY_BUTTON_TEXT = 'change category';
 const QUESTION_BUTTON_TEXT = 'next question';
-
-const DifficultyButton = () => (
-    <Link
-      className={styles.difficulty}
-      to={PATH_DIFFICULTY}
-    >
-        {DIFFICULTY_BUTTON_TEXT}
-    </Link>
-);
 
 // TODO: Use Link component for routing
 // TODO: Pull from db
@@ -60,7 +52,10 @@ const Question = () => {
 
     return (
         <>
-          <DifficultyButton />
+          <BackLink
+            path={PATH_DIFFICULTY}
+            text={DIFFICULTY_BUTTON_TEXT}
+          />
           <h1 className={styles.question}>{questionList[0]}</h1>
           { hasQuestions
               ? <QuestionButton clickFn={() => updateQuestionList(questionList, setQuestionList)} />

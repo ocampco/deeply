@@ -1,8 +1,3 @@
-.difficulty {
-  color: var(--default-primary-beige);
-  margin-bottom: 0.5rem;
-}
-
 .question {
     font-size: 2rem;
     line-height: var(--default-line-height);
