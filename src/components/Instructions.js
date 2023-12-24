@@ -8,6 +8,7 @@ const Instructions = () => {
 
     return (
         <>
+          <div className={styles.instructions}>
             <h1>before you start</h1>
             <ul className={styles.items}>
                 <li className={styles.item}>
@@ -17,11 +18,12 @@ const Instructions = () => {
                     if you'd like to drink, raise a glass and say <span className={styles.emphasis}>"deep"</span> if the answer resonates with you
                 </li>
             </ul>
-            <div className={styles.button}>
-                <Link to={`${PATH_QUESTION_SEGMENT}/${difficulty}`}>
-                    i'm ready
-                </Link>
-            </div>
+          </div>
+          <div className={styles.button}>
+              <Link to={`${PATH_QUESTION_SEGMENT}/${difficulty}`}>
+                  i'm ready
+              </Link>
+          </div>
         </>
     )
 };

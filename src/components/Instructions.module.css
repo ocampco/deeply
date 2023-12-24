@@ -1,3 +1,10 @@
+.instructions {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .items {
     margin-bottom: 3rem;
 
