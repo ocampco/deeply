@@ -3,6 +3,7 @@ import shuffle from 'lodash/shuffle';
 import drop from 'lodash/drop';
 import { Link, useParams } from 'react-router-dom';
 import BackLink from './BackLink';
+import Badge from './Badge';
 import { PATH_DIFFICULTY, PATH_SUMMARY } from '../constants/paths';
 import fixture from '../fixture';
 import styles from './Question.module.css';
@@ -56,7 +57,10 @@ const Question = () => {
             path={PATH_DIFFICULTY}
             text={DIFFICULTY_BUTTON_TEXT}
           />
-          <h1 className={styles.question}>{questionList[0]}</h1>
+          <div className={styles.content}>
+            <Badge>deeply original</Badge>
+            <h1 className={styles.question}>{questionList[0]}</h1>
+          </div>
           { hasQuestions
               ? <QuestionButton clickFn={() => updateQuestionList(questionList, setQuestionList)} />
               : <SummaryButton />
