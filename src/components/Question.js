@@ -58,7 +58,7 @@ const Question = () => {
             text={DIFFICULTY_BUTTON_TEXT}
           />
           <div className={styles.content}>
-            <Badge>deeply original</Badge>
+            <Badge secondary>deeply original</Badge>
             <h1 className={styles.question}>{questionList[0]}</h1>
           </div>
           { hasQuestions
