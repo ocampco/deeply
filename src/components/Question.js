@@ -4,12 +4,14 @@ import drop from 'lodash/drop';
 import { Link, useParams } from 'react-router-dom';
 import BackLink from './BackLink';
 import Badge from './Badge';
+import { ForwardArrow } from './Arrow';
 import { PATH_DIFFICULTY, PATH_SUMMARY } from '../constants/paths';
 import fixture from '../fixture';
 import styles from './Question.module.css';
 
-const DIFFICULTY_BUTTON_TEXT = 'change category';
-const QUESTION_BUTTON_TEXT = 'next question';
+const BUTTON_TEXT_DIFFICULTY = 'change category';
+const BUTTON_TEXT_NEXT = 'next question';
+const BUTTON_TEXT_END = 'finish';
 
 // TODO: Use Link component for routing
 // TODO: Pull from db
@@ -19,15 +21,17 @@ const QuestionButton = ({ clickFn }) => (
         className={styles.button}
         onClick={clickFn}
     >
-        {QUESTION_BUTTON_TEXT}
+      {BUTTON_TEXT_NEXT}
+      <ForwardArrow />
     </button>
 );
 
 const SummaryButton = () => (
     <div className={styles.button}>
-        <Link to={PATH_SUMMARY}>
-            {QUESTION_BUTTON_TEXT}
-        </Link>
+      <Link to={PATH_SUMMARY}>
+        {BUTTON_TEXT_END}
+        <ForwardArrow />
+      </Link>
     </div>
 );
 
@@ -54,7 +58,7 @@ const Question = () => {
     return (
         <>
           <BackLink path={PATH_DIFFICULTY}>
-            {DIFFICULTY_BUTTON_TEXT}
+            {BUTTON_TEXT_DIFFICULTY}
           </BackLink>
           <div className={styles.content}>
             <Badge secondary>deeply original</Badge>
