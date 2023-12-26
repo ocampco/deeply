@@ -1,11 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
-import { LIGHT_THEME } from '../constants/theme';
 
 const Container = styled.div`
     display: flex;
-    background-color: ${props => props.theme.bg};
-    color: ${props => props.theme.fg};
+    background-color: ${props => props.secondary
+      ? 'var(--default-primary-brown)'
+      : 'var(--default-primary-beige)'
+    };
+    color: ${props => props.secondary
+      ? 'var(--default-primary-beige)'
+      : 'var(--default-primary-brown)'
+    };
     height: 100vh;
     width: 100%;
     padding: 2rem 1.5rem;
@@ -31,8 +36,8 @@ const Content = styled.div`
     }
 `;
 
-const Layout = ({ theme = LIGHT_THEME, children }) => (
-    <Container theme={theme}>
+const Layout = ({ secondary, children }) => (
+    <Container secondary={secondary}>
         <Content>
             { children }
         </Content>
