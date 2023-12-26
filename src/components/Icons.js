@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import {
   IoIosArrowBack,
   IoIosArrowForward,
+  IoMdRepeat,
   IoMdOpen,
 } from 'react-icons/io';
 
@@ -14,6 +15,11 @@ export const BackArrow = styled(IoIosArrowBack)`
 export const ForwardArrow = styled(IoIosArrowForward)`
   margin-left: 0.25rem;
   vertical-align: middle;
+`;
+
+export const RepeatArrow = styled(IoMdRepeat)`
+  vertical-align: middle;
+  margin-left: 0.25rem;
 `;
 
 export const ExternalLink = styled(IoMdOpen)`

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ExternalLink } from './Icons';
+import { ExternalLink, RepeatArrow } from './Icons';
 import {
     PATH_DONATE,
     PATH_DIFFICULTY,
@@ -35,6 +35,7 @@ const Summary = () => (
         <div className={styles.restart}>
           <Link to={`${PATH_DIFFICULTY}?${QUERY_SHOW_PWA}`}>
             try another
+            <RepeatArrow />
           </Link>
         </div>
     </>
