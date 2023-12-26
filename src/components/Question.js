@@ -53,10 +53,9 @@ const Question = () => {
 
     return (
         <>
-          <BackLink
-            path={PATH_DIFFICULTY}
-            text={DIFFICULTY_BUTTON_TEXT}
-          />
+          <BackLink path={PATH_DIFFICULTY}>
+            {DIFFICULTY_BUTTON_TEXT}
+          </BackLink>
           <div className={styles.content}>
             <Badge secondary>deeply original</Badge>
             <h1 className={styles.question}>{questionList[0]}</h1>

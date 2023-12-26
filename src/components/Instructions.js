@@ -11,10 +11,9 @@ const Instructions = () => {
 
     return (
         <>
-          <BackLink
-            path={PATH_DIFFICULTY}
-            text={DIFFICULTY_BUTTON_TEXT}
-          />
+          <BackLink path={PATH_DIFFICULTY}>
+            {DIFFICULTY_BUTTON_TEXT}
+          </BackLink>
           <div className={styles.instructions}>
             <h1>before you start</h1>
             <ul className={styles.items}>
