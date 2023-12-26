@@ -7,8 +7,11 @@
 }
 
 .question {
+    max-height: 25rem;
+    overflow: scroll;
     font-size: 2rem;
     line-height: var(--default-line-height);
+    margin-bottom: 0;
 }
 
 /* TODO: Refactor when moved to Link component */
