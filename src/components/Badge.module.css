@@ -1,0 +1,11 @@
+.badge {
+  width: fit-content;
+  padding: 0.25rem 0.5rem;
+  margin-bottom: 0.25rem;
+  /* TODO: Use var size */
+  font-size: 1rem;
+  color: var(--default-primary-brown);
+  background-color: var(--default-primary-beige);
+  border-radius: var(--default-border-radius);
+  text-transform: uppercase;
+}
