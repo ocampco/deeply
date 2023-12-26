@@ -8,6 +8,7 @@ import styles from './Difficulty.module.css';
 const DifficultyLevel = ({
     url,
     displayName,
+    emoji,
     description,
 }) => (
     <li className={styles.level}>
@@ -15,7 +16,7 @@ const DifficultyLevel = ({
             to={PATH_INSTRUCTIONS}
             state={{ difficulty: url }}
         >
-            <h2 className={styles.name}>{displayName}</h2>
+            <h2 className={styles.name}>{displayName} {emoji}</h2>
             <p className={styles.description}>{description}</p>
         </Link>
     </li>
@@ -25,11 +26,17 @@ const Difficulty = () => (
     <>
         <h1>how deep would you like to go?</h1>
         <ul className={styles.levels}>
-        { difficultyLevels.map(({ url, displayName, description }) => (
+        { difficultyLevels.map(({
+          url,
+          displayName,
+          emoji,
+          description,
+        }) => (
             <DifficultyLevel
                 key={url}
                 url={url}
                 displayName={displayName}
+                emoji={emoji}
                 description={description}
             />
         ))}
