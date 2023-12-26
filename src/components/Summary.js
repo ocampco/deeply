@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { OpenLink } from './Icons';
+import { ExternalLink } from './Icons';
 import {
     PATH_DONATE,
     PATH_DIFFICULTY,
@@ -27,7 +27,7 @@ const Summary = () => (
               rel='noopener noreferrer'
           >
             <p className={styles.link}>
-              <OpenLink />
+              <ExternalLink />
               buy me a coffee
             </p>
           </a>

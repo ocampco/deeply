@@ -16,7 +16,7 @@ export const ForwardArrow = styled(IoIosArrowForward)`
   vertical-align: middle;
 `;
 
-export const OpenLink = styled(IoMdOpen)`
+export const ExternalLink = styled(IoMdOpen)`
   vertical-align: middle;
   margin-right: 0.25rem;
 `;
