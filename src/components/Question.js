@@ -4,7 +4,7 @@ import drop from 'lodash/drop';
 import { Link, useParams } from 'react-router-dom';
 import BackLink from './BackLink';
 import Badge from './Badge';
-import { ForwardArrow } from './Arrow';
+import { ForwardArrow } from './Icons';
 import { PATH_DIFFICULTY, PATH_SUMMARY } from '../constants/paths';
 import fixture from '../fixture';
 import styles from './Question.module.css';
