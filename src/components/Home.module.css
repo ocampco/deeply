@@ -10,7 +10,13 @@
 
 .subheading {
     composes: animate from '../styles/constants.module.css';
-    margin-bottom: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.badge {
+  composes: animate from '../styles/constants.module.css';
+  align-self: center;
+  margin-bottom: 2.5rem;
 }
 
 .link {
