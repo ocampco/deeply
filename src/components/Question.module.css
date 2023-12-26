@@ -1,6 +1,10 @@
 .question {
     font-size: 2rem;
     line-height: var(--default-line-height);
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /* TODO: Refactor when moved to Link component */

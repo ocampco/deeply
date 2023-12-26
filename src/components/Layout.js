@@ -20,7 +20,7 @@ const Content = styled.div`
     align-self: center;
     display: flex;
     flex-direction: column;
-    justify-content: ${props => props.justify || 'center'};
+    justify-content: center;
     height: 100%;
     width: 100%;
     max-width: 600px;
@@ -31,9 +31,9 @@ const Content = styled.div`
     }
 `;
 
-const Layout = ({ theme = LIGHT_THEME, justify, children }) => (
+const Layout = ({ theme = LIGHT_THEME, children }) => (
     <Container theme={theme}>
-        <Content justify={justify}>
+        <Content>
             { children }
         </Content>
     </Container>

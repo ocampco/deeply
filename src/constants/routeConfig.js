@@ -19,7 +19,6 @@ const routeConfig = [{
     path: paths.PATH_QUESTION,
     Component: Question,
     theme: DARK_THEME,
-    justify: 'space-between',
 }, {
     path: paths.PATH_SUMMARY,
     Component: Summary,
