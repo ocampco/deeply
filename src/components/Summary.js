@@ -8,33 +8,39 @@ import {
 import { QUERY_SHOW_PWA } from '../constants/queries';
 import styles from './Summary.module.css';
 
+const TEXT_HEADING = 'thanks for playing';
+const TEXT_SUBHEADING = 'did you like the game?';
+const TEXT_DESCRIPTION = 'if you\'d like to help me make this app better, you can';
+const TEXT_LINK = 'buy me a coffee';
+const TEXT_BUTTON = 'try another';
+
 const Summary = () => (
     <>
         <div className={styles.actions}>
           <h1>
-            thanks for playing
+            {TEXT_HEADING} <span role='img' aria-label='party popper'>🎉</span>
           </h1>
-          <h2 className={styles.title}>
-            did you like the game?
+          <h2 className={styles.subheading}>
+            {TEXT_SUBHEADING}
           </h2>
           <p className={styles.description}>
-            if you'd like to help me make this app better, you can
+            {TEXT_DESCRIPTION}
           </p>
           <a
               href={PATH_DONATE}
-              title='buy me a coffee'
+              title={TEXT_LINK}
               target='_blank'
               rel='noopener noreferrer'
           >
             <p className={styles.link}>
               <ExternalLink />
-              buy me a coffee
+              {TEXT_LINK}
             </p>
           </a>
         </div>
         <div className={styles.restart}>
           <Link to={`${PATH_DIFFICULTY}?${QUERY_SHOW_PWA}`}>
-            try another
+            {TEXT_BUTTON}
             <RepeatArrow />
           </Link>
         </div>
