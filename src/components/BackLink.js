@@ -2,7 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { IoIosArrowBack } from 'react-icons/io';
-import styles from './BackLink.module.css';
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
 
 const BackArrow = styled(IoIosArrowBack)`
   margin-right: 0.25rem;
@@ -18,12 +22,12 @@ const BackLink = ({
   path,
   text,
 }) => (
-  <div className={styles.container}>
+  <Container>
     <BackArrow />
     <Text to={path}>
       {text}
     </Text>
-  </div>
+  </Container>
 );
 
 export default BackLink;
