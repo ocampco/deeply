@@ -1,28 +1,40 @@
 const CASUAL = {
     url: 'casual',
     displayName: 'casual',
-    emoji: '\u{1f377}',
+    emoji: {
+      icon: '🍷',
+      label: 'wine glass',
+    },
     description: 'start the conversation and try something new',
 };
 
 const INTIMATE = {
     url: 'intimate',
     displayName: 'intimate',
-    emoji: '\u{1f496}',
+    emoji: {
+      icon: '💖',
+      label: 'sparkling heart',
+    },
     description: 'come out of your shell',
 };
 
 const CONTROVERSIAL = {
     url: 'controversial',
     displayName: 'controversial',
-    emoji: '\u{1f336}',
+    emoji: {
+      icon: '🌶',
+      label: 'hot pepper',
+    },
     description: 'questions that raise more questions',
 };
 
 const MEMORIES = {
     url: 'memories',
     displayName: 'memories',
-    emoji: '\u{1f4F8}',
+    emoji: {
+      icon: '📸',
+      label: 'camera with flash',
+    },
     description: 'reflect on your first and last times',
 };
 

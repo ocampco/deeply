@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Emoji from './Emoji';
 import difficultyLevels from '../constants/difficultyLevels';
 import { PATH_INSTRUCTIONS } from '../constants/paths';
 import styles from './Difficulty.module.css';
@@ -8,7 +9,10 @@ import styles from './Difficulty.module.css';
 const DifficultyLevel = ({
     url,
     displayName,
-    emoji,
+    emoji: {
+      icon,
+      label,
+    },
     description,
 }) => (
     <li className={styles.level}>
@@ -16,7 +20,9 @@ const DifficultyLevel = ({
             to={PATH_INSTRUCTIONS}
             state={{ difficulty: url }}
         >
-            <h2 className={styles.name}>{displayName} {emoji}</h2>
+            <h2 className={styles.name}>
+              {displayName} <Emoji label={label}>{icon}</Emoji>
+            </h2>
             <p className={styles.description}>{description}</p>
         </Link>
     </li>

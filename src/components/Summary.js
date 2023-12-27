@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Emoji from './Emoji';
 import { ExternalLink, RepeatArrow } from './Icons';
 import {
     PATH_DONATE,
     PATH_DIFFICULTY,
 } from '../constants/paths';
-import { QUERY_SHOW_PWA } from '../constants/queries';
 import styles from './Summary.module.css';
 
 const TEXT_HEADING = 'thanks for playing';
@@ -18,7 +18,7 @@ const Summary = () => (
     <>
         <div className={styles.actions}>
           <h1>
-            {TEXT_HEADING} <span role='img' aria-label='party popper'>🎉</span>
+            {TEXT_HEADING} <Emoji label='party popper'>🎉</Emoji>
           </h1>
           <h2 className={styles.subheading}>
             {TEXT_SUBHEADING}
@@ -39,7 +39,7 @@ const Summary = () => (
           </a>
         </div>
         <div className={styles.restart}>
-          <Link to={`${PATH_DIFFICULTY}?${QUERY_SHOW_PWA}`}>
+          <Link to={`${PATH_DIFFICULTY}`}>
             {TEXT_BUTTON}
             <RepeatArrow />
           </Link>
