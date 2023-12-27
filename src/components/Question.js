@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import shuffle from 'lodash/shuffle';
 import drop from 'lodash/drop';
+import slice from 'lodash/slice';
 import { Link, useParams } from 'react-router-dom';
 import BackLink from './BackLink';
 import Badge from './Badge';
@@ -12,6 +13,7 @@ import styles from './Question.module.css';
 const BUTTON_TEXT_DIFFICULTY = 'change category';
 const BUTTON_TEXT_NEXT = 'next question';
 const BUTTON_TEXT_END = 'finish';
+const MAX_QUESTIONS = 5;
 
 // TODO: Use Link component for routing
 // TODO: Pull from db
@@ -49,9 +51,11 @@ const updateQuestionList = (
     setQuestionList(newQuestionList);
 }
 
+// TODO: Migrate logic to API
 const Question = () => {
     const { difficulty } = useParams();
-    const questions = getShuffledQuestions(fixture, difficulty);
+    const shuffledQuestions = getShuffledQuestions(fixture, difficulty);
+    const questions = slice(shuffledQuestions, 0, MAX_QUESTIONS);
     const [questionList, setQuestionList] = useState(questions);
     const hasQuestions = questionList.length > 1;
 
