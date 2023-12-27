@@ -18,6 +18,7 @@ const Container = styled.div`
 
     @media (min-width: 640px) {
         display: flex;
+        padding: 6rem 4.5rem;
     }
 `;
 
