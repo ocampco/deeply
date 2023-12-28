@@ -17,6 +17,10 @@ const Content = styled.div`
   justify-content: center;
 `;
 
+const StyledEmoji = styled(Emoji)`
+  margin-left: 0.5rem;
+`;
+
 const Subheading = styled.h2`
   margin-bottom: 1rem;
 `;
@@ -34,7 +38,7 @@ const StyledNextLink = styled(NextLink)`
   margin: 0 auto
 `;
 
-const TEXT_HEADING = 'thanks for playing ';
+const TEXT_HEADING = 'thanks for playing';
 const TEXT_SUBHEADING = 'did you like the game?';
 const TEXT_DESCRIPTION = 'if you\'d like to help me make this app better, you can';
 const TEXT_LINK = 'buy me a coffee';
@@ -45,7 +49,7 @@ const Summary = () => (
         <Content>
           <h1>
             {TEXT_HEADING}
-            <Emoji label='party popper'>🎉</Emoji>
+            <StyledEmoji label='party popper'>🎉</StyledEmoji>
           </h1>
           <Subheading>{TEXT_SUBHEADING}</Subheading>
           <Description>{TEXT_DESCRIPTION}</Description>

@@ -39,10 +39,15 @@ const PlaceholderContainer = styled(Container)`
   }
 `;
 
+const StyledEmoji = styled(Emoji)`
+  margin-left: 0.25rem;
+`;
+
 export const PlaceholderCategory = () => (
   <PlaceholderContainer>
     <Name>
-      user submitted - unavailable <Emoji label='construction'>🚧</Emoji>
+      user submitted - unavailable
+      <StyledEmoji label='construction'>🚧</StyledEmoji>
     </Name>
   </PlaceholderContainer>
 );
@@ -62,7 +67,8 @@ const Category = ({
       state={{ category: url }}
     >
       <Name>
-        {displayName} <Emoji label={label}>{icon}</Emoji>
+        {displayName}
+        <StyledEmoji label={label}>{icon}</StyledEmoji>
       </Name>
       <Description>
         {description}

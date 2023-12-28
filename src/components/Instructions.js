@@ -12,6 +12,10 @@ const Content = styled.div`
   justify-content: center;
 `;
 
+const StyledEmoji = styled(Emoji)`
+  margin-left: 0.5rem;
+`;
+
 const Item = styled.li`
   line-height: var(--default-line-height);
   list-style: inside;
@@ -31,7 +35,7 @@ const StyledNextLink = styled(NextLink)`
 
 const TEXT_BUTTON_BACK = 'change category';
 const TEXT_BUTTON_NEXT = 'i\'m ready';
-const TEXT_HEADING = 'before you start ';
+const TEXT_HEADING = 'before you start';
 const TEXT_ITEM_1 = 'please take your time to think about each answer';
 const TEXT_ITEM_2 = 'if you\'d like to drink, raise a glass and say "deep" if the answer resonates with you';
 
@@ -46,7 +50,7 @@ const Instructions = () => {
           <Content>
             <h1>
               {TEXT_HEADING}
-              <Emoji label='raised hand'>✋</Emoji>
+              <StyledEmoji label='raised hand'>✋</StyledEmoji>
             </h1>
             <ul>
               <Item>{TEXT_ITEM_1}</Item>
