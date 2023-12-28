@@ -1,7 +1,0 @@
-/* TODO: Refactor when moved to Link component */
-.button {
-    composes: button from '../styles/constants.module.css';
-    border: none;
-    color: var(--default-primary-brown);
-    align-self: flex-end;
-}

@@ -10,7 +10,6 @@ import NextLink from './shared/NextLink';
 import { ForwardArrow } from './shared/Icons';
 import { PATH_CATEGORY, PATH_SUMMARY } from '../constants/paths';
 import fixture from '../fixture';
-import styles from './Question.module.css';
 
 const BUTTON_TEXT_BACK = 'change category';
 const BUTTON_TEXT_NEXT = 'next question';
@@ -18,26 +17,37 @@ const BUTTON_TEXT_END = 'finish';
 const MAX_QUESTIONS = 6;
 
 // TODO: Use Link component for routing
-// TODO: Pull from db
+// TODO: Migrate logic to API
+
+const Button = styled.button`
+  border: none;
+  color: var(--default-primary-brown);
+  align-self: flex-end;
+  border-radius: var(--default-border-radius);
+  box-shadow: var(--default-box-shadow);
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+`;
+
 const QuestionButton = ({ clickFn }) => (
-    <button
-        type='button'
-        className={styles.button}
-        onClick={clickFn}
+    <Button
+      type='button'
+      onClick={clickFn}
     >
       {BUTTON_TEXT_NEXT}
       <ForwardArrow />
-    </button>
+    </Button>
 );
 
-const StyledContent = styled.div`
+const Content = styled.div`
   display: flex;
   flex-grow: 1;
   flex-direction: column;
   justify-content: center;
 `;
 
-const StyledQuestion = styled.h1`
+const Heading = styled.h1`
   max-height: 25rem;
   overflow: scroll;
   font-size: 2rem;
@@ -63,7 +73,6 @@ const updateQuestionList = (
     setQuestionList(newQuestionList);
 }
 
-// TODO: Migrate logic to API
 const Question = () => {
     const { category } = useParams();
     const shuffledQuestions = getShuffledQuestions(fixture, category);
@@ -76,10 +85,10 @@ const Question = () => {
           <BackLink path={PATH_CATEGORY}>
             {BUTTON_TEXT_BACK}
           </BackLink>
-          <StyledContent>
+          <Content>
             <Badge secondary>deeply original</Badge>
-            <StyledQuestion>{questionList[0]}</StyledQuestion>
-          </StyledContent>
+            <Heading>{questionList[0]}</Heading>
+          </Content>
           { hasQuestions
               ? <QuestionButton clickFn={() => updateQuestionList(questionList, setQuestionList)} />
               : <StyledNextLink to={PATH_SUMMARY}>{BUTTON_TEXT_END}<ForwardArrow /></StyledNextLink>
