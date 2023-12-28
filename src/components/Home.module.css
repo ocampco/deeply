@@ -11,16 +11,11 @@
 .subheading {
     composes: animate from '../styles/constants.module.css';
     margin-bottom: 1rem;
+    text-align: center;
 }
 
 .badge {
   composes: animate from '../styles/constants.module.css';
   align-self: center;
   margin-bottom: 2.5rem;
-}
-
-.link {
-    composes: animate from '../styles/constants.module.css';
-    composes: button from '../styles/constants.module.css';
-    margin: 0 auto;
 }
