@@ -17,7 +17,7 @@ const routeConfig = [{
 }, {
     path: paths.PATH_QUESTION,
     Component: Question,
-    secondary: true,
+    theme: { secondary: true },
 }, {
     path: paths.PATH_SUMMARY,
     Component: Summary,

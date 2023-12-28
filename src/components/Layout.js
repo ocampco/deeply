@@ -3,11 +3,11 @@ import styled from 'styled-components';
 
 const Container = styled.div`
     display: flex;
-    background-color: ${props => props.secondary
+    background-color: ${props => props.theme.secondary
       ? 'var(--default-primary-brown)'
       : 'var(--default-primary-beige)'
     };
-    color: ${props => props.secondary
+    color: ${props => props.theme.secondary
       ? 'var(--default-primary-beige)'
       : 'var(--default-primary-brown)'
     };
@@ -37,8 +37,8 @@ const Content = styled.div`
     }
 `;
 
-const Layout = ({ secondary, children }) => (
-    <Container secondary={secondary}>
+const Layout = ({ theme, children }) => (
+    <Container theme={theme}>
         <Content>
             { children }
         </Content>
