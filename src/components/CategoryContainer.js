@@ -1,38 +1,42 @@
-import Emoji from './shared/Emoji';
-import Category from './Category';
+import styled from 'styled-components';
+import Category, { PlaceholderCategory } from './Category';
 import categories from '../constants/categories';
-import styles from './CategoryContainer.module.css';
 
-// TODO: Clean up
-const PlaceholderDifficultyLevel = () => (
-  <li className={styles.placeholderLevel}>
-    <h2 className={styles.name}>
-      user submitted - coming soon <Emoji label='construction'>🚧</Emoji>
-    </h2>
-  </li>
-);
+const StyledList = styled.ul`
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 1rem;
+  row-gap: 1rem;
+
+  @media (min-width: 640px) {
+      grid-auto-rows: 1fr;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+`;
+
+const TEXT_HEADING = 'how deep would you like to go?';
 
 const CategoryContainer = () => (
-    <>
-        <h1>how deep would you like to go?</h1>
-        <ul className={styles.levels}>
-          <PlaceholderDifficultyLevel />
-          { categories.map(({
-            url,
-            displayName,
-            emoji,
-            description,
-          }) => (
-            <Category
-                key={url}
-                url={url}
-                displayName={displayName}
-                emoji={emoji}
-                description={description}
-            />
-          ))}
-        </ul>
-    </>
+  <>
+    <h1>{TEXT_HEADING}</h1>
+    <StyledList>
+      <PlaceholderCategory />
+      { categories.map(({
+        url,
+        displayName,
+        emoji,
+        description,
+      }) => (
+        <Category
+          key={url}
+          url={url}
+          displayName={displayName}
+          emoji={emoji}
+          description={description}
+        />
+      ))}
+    </StyledList>
+  </>
 );
 
 export default CategoryContainer;

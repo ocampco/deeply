@@ -36,7 +36,7 @@ const TEXT_ITEM_1 = 'please take your time to think about each answer';
 const TEXT_ITEM_2 = 'if you\'d like to drink, raise a glass and say "deep" if the answer resonates with you';
 
 const Instructions = () => {
-    const { state: { difficulty } } = useLocation();
+    const { state: { category } } = useLocation();
 
     return (
         <>
@@ -53,7 +53,7 @@ const Instructions = () => {
               <StyledItem>{TEXT_ITEM_2}</StyledItem>
             </ul>
           </StyledContent>
-          <StyledNextLink to={`${PATH_QUESTION_SEGMENT}/${difficulty}`}>
+          <StyledNextLink to={`${PATH_QUESTION_SEGMENT}/${category}`}>
             {TEXT_BUTTON_NEXT}
           </StyledNextLink>
         </>

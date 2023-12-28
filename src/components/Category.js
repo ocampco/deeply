@@ -29,6 +29,24 @@ const StyledDescription = styled.p`
   font-weight: 400;
 `;
 
+const StyledPlaceholderCategory = styled(StyledCategory)`
+  color: var(--default-primary-grey);
+  opacity: 60%;
+  height: fit-content;
+
+  @media (min-width: 640px) {
+    height: auto;
+  }
+`;
+
+export const PlaceholderCategory = () => (
+  <StyledPlaceholderCategory>
+    <StyledName>
+      user submitted - unavailable <Emoji label='construction'>🚧</Emoji>
+    </StyledName>
+  </StyledPlaceholderCategory>
+);
+
 const Category = ({
   url,
   displayName,
@@ -41,7 +59,7 @@ const Category = ({
   <StyledCategory>
     <Link
       to={PATH_INSTRUCTIONS}
-      state={{ difficulty: url }}
+      state={{ category: url }}
     >
       <StyledName>
         {displayName} <Emoji label={label}>{icon}</Emoji>

@@ -12,7 +12,7 @@ import { PATH_CATEGORY, PATH_SUMMARY } from '../constants/paths';
 import fixture from '../fixture';
 import styles from './Question.module.css';
 
-const BUTTON_TEXT_DIFFICULTY = 'change category';
+const BUTTON_TEXT_BACK = 'change category';
 const BUTTON_TEXT_NEXT = 'next question';
 const BUTTON_TEXT_END = 'finish';
 const MAX_QUESTIONS = 5;
@@ -49,8 +49,8 @@ const StyledNextLink = styled(NextLink)`
   align-self: flex-end;
 `;
 
-const getShuffledQuestions = (questionList, difficulty) => {
-    const questions = questionList[difficulty];
+const getShuffledQuestions = (questionList, category) => {
+    const questions = questionList[category];
 
     return shuffle(questions);
 }
@@ -65,8 +65,8 @@ const updateQuestionList = (
 
 // TODO: Migrate logic to API
 const Question = () => {
-    const { difficulty } = useParams();
-    const shuffledQuestions = getShuffledQuestions(fixture, difficulty);
+    const { category } = useParams();
+    const shuffledQuestions = getShuffledQuestions(fixture, category);
     const questions = slice(shuffledQuestions, 0, MAX_QUESTIONS);
     const [questionList, setQuestionList] = useState(questions);
     const hasQuestions = questionList.length > 1;
@@ -74,7 +74,7 @@ const Question = () => {
     return (
         <>
           <BackLink path={PATH_CATEGORY}>
-            {BUTTON_TEXT_DIFFICULTY}
+            {BUTTON_TEXT_BACK}
           </BackLink>
           <StyledContent>
             <Badge secondary>deeply original</Badge>
