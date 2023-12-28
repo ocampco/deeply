@@ -13,11 +13,18 @@ const StyledButton = styled(RoundedButton)`
   padding: 1rem 2rem;
   font-size: 1.125rem;
   font-weight: 700;
+  animation: ${props => props.animate
+    ? 'var(--default-animation)'
+    : 'none'
+  };
 `;
 
-const Button = ({ className, to, children }) => (
-  <Link className={className} to={to}>
-    <StyledButton>
+const Button = ({ to, animate, className, children }) => (
+  <Link
+    className={className}
+    to={to}
+  >
+    <StyledButton animate={animate}>
       {children}
     </StyledButton>
   </Link>

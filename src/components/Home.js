@@ -12,7 +12,6 @@ const TEXT_BUTTON = 'start';
 
 const StyledButton = styled(Button)`
   margin: 0 auto;
-  animation: var(--default-animation);
 `;
 
 const Home = () => (
@@ -22,7 +21,7 @@ const Home = () => (
         <span className={styles.badge}>
           <Badge>{TEXT_BADGE}</Badge>
         </span>
-        <StyledButton to={PATH_DIFFICULTY}>
+        <StyledButton to={PATH_DIFFICULTY} animate>
           {TEXT_BUTTON}
         </StyledButton>
     </>
