@@ -1,5 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import BackLink from './shared/BackLink';
+import Emoji from './shared/Emoji';
 import { PATH_DIFFICULTY, PATH_QUESTION_SEGMENT } from '../constants/paths';
 import styles from './Instructions.module.css';
 
@@ -14,7 +15,7 @@ const Instructions = () => {
             {DIFFICULTY_BUTTON_TEXT}
           </BackLink>
           <div className={styles.content}>
-            <h1>before you start</h1>
+            <h1>before you start <Emoji label='raised hand'>✋</Emoji></h1>
             <ul>
                 <li className={styles.item}>
                   please take your time to think about each answer
