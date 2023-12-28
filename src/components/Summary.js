@@ -30,7 +30,7 @@ const Description = styled.p`
   margin-bottom: 0.25rem;
 `;
 
-const Link = styled.p`
+const LinkText = styled.p`
   text-decoration: underline;
 `;
 
@@ -59,10 +59,10 @@ const Summary = () => (
               target='_blank'
               rel='noopener noreferrer'
           >
-            <Link>
+            <LinkText>
               <ExternalLink />
               {TEXT_LINK}
-            </Link>
+            </LinkText>
           </a>
         </Content>
         <StyledNextLink to={`${PATH_CATEGORY}`}>
