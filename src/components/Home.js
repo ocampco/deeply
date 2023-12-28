@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Badge from './shared/Badge';
-import Button from './shared/Button';
+import NextLink from './shared/NextLink';
 import { PATH_DIFFICULTY } from '../constants/paths';
 
 const StyledHeading = styled.h1`
@@ -25,7 +25,7 @@ const StyledBadge = styled(Badge)`
   margin-bottom: 2.5rem;
 `
 
-const StyledButton = styled(Button)`
+const StyledNextLink = styled(NextLink)`
   animation: var(--default-animation);
   margin: 0 auto;
 `;
@@ -40,9 +40,9 @@ const Home = () => (
     <StyledHeading>{TEXT_HEADING}</StyledHeading>
     <StyledSubheading>{TEXT_SUBHEADING}</StyledSubheading>
     <StyledBadge>{TEXT_BADGE}</StyledBadge>
-    <StyledButton to={PATH_DIFFICULTY}>
+    <StyledNextLink to={PATH_DIFFICULTY}>
       {TEXT_BUTTON}
-    </StyledButton>
+    </StyledNextLink>
   </>
 );
 

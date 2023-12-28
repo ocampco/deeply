@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { useLocation } from 'react-router-dom';
 import BackLink from './shared/BackLink';
 import Emoji from './shared/Emoji';
-import Button from './shared/Button';
+import NextLink from './shared/NextLink';
 import { PATH_DIFFICULTY, PATH_QUESTION_SEGMENT } from '../constants/paths';
 
 const StyledContent = styled.div`
@@ -24,7 +24,7 @@ const StyledItem = styled.li`
   }
 `;
 
-const StyledButton = styled(Button)`
+const StyledNextLink = styled(NextLink)`
   animation: var(--default-animation);
   margin: 0 auto;
 `;
@@ -53,9 +53,9 @@ const Instructions = () => {
               <StyledItem>{TEXT_ITEM_2}</StyledItem>
             </ul>
           </StyledContent>
-          <StyledButton to={`${PATH_QUESTION_SEGMENT}/${difficulty}`}>
+          <StyledNextLink to={`${PATH_QUESTION_SEGMENT}/${difficulty}`}>
             {TEXT_BUTTON_NEXT}
-          </StyledButton>
+          </StyledNextLink>
         </>
     )
 };
