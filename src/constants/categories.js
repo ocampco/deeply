@@ -38,11 +38,11 @@ const MEMORIES = {
     description: 'reflect on your first and last times',
 };
 
-const difficultyLevels = [
+const categories = [
     CASUAL,
     INTIMATE,
     CONFRONTING,
     MEMORIES,
 ];
 
-export default difficultyLevels;
+export default categories;
