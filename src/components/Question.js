@@ -1,10 +1,12 @@
 import { useState } from 'react';
+import styled from 'styled-components';
 import shuffle from 'lodash/shuffle';
 import drop from 'lodash/drop';
 import slice from 'lodash/slice';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import BackLink from './shared/BackLink';
 import Badge from './shared/Badge';
+import NextLink from './shared/NextLink';
 import { ForwardArrow } from './shared/Icons';
 import { PATH_DIFFICULTY, PATH_SUMMARY } from '../constants/paths';
 import fixture from '../fixture';
@@ -28,14 +30,24 @@ const QuestionButton = ({ clickFn }) => (
     </button>
 );
 
-const SummaryButton = () => (
-    <div className={styles.button}>
-      <Link to={PATH_SUMMARY}>
-        {BUTTON_TEXT_END}
-        <ForwardArrow />
-      </Link>
-    </div>
-);
+const StyledContent = styled.div`
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+`;
+
+const StyledQuestion = styled.h1`
+  max-height: 25rem;
+  overflow: scroll;
+  font-size: 2rem;
+  line-height: var(--default-line-height);
+  margin-bottom: 0;
+`;
+
+const StyledNextLink = styled(NextLink)`
+  align-self: flex-end;
+`;
 
 const getShuffledQuestions = (questionList, difficulty) => {
     const questions = questionList[difficulty];
@@ -64,13 +76,13 @@ const Question = () => {
           <BackLink path={PATH_DIFFICULTY}>
             {BUTTON_TEXT_DIFFICULTY}
           </BackLink>
-          <div className={styles.content}>
+          <StyledContent>
             <Badge secondary>deeply original</Badge>
-            <h1 className={styles.question}>{questionList[0]}</h1>
-          </div>
+            <StyledQuestion>{questionList[0]}</StyledQuestion>
+          </StyledContent>
           { hasQuestions
               ? <QuestionButton clickFn={() => updateQuestionList(questionList, setQuestionList)} />
-              : <SummaryButton />
+              : <StyledNextLink to={PATH_SUMMARY}>{BUTTON_TEXT_END}<ForwardArrow /></StyledNextLink>
           }
         </>
     )

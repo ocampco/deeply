@@ -16,8 +16,8 @@ const StyledContainer = styled(RoundedContainer)`
 `;
 
 const NextLink = ({ to, className, children }) => (
-  <Link to={to}>
-    <StyledContainer className={className}>
+  <Link to={to} className={className}>
+    <StyledContainer>
       {children}
     </StyledContainer>
   </Link>
