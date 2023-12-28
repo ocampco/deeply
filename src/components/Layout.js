@@ -11,35 +11,40 @@ const Container = styled.div`
       ? 'var(--default-primary-beige)'
       : 'var(--default-primary-brown)'
     };
-    height: 100vh;
+    height: ${props => props.theme.full
+      ? '100%'
+      : '100vh'
+    };
     width: 100%;
     padding: 2rem 1.5rem;
     box-sizing: border-box;
 
     @media (min-width: 640px) {
         display: flex;
-        padding: 6rem 4.5rem;
+        height: 100vh;
+        padding: ${props => props.theme.full
+          ? '4rem 3rem 0'
+          : '4rem 3rem'
+        };
     }
 `;
 
 const Content = styled.div`
-    align-self: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: ${props => props.theme.center
+      ? 'center'
+      : 'flex-start'
+    };
     height: 100%;
     width: 100%;
     max-width: 600px;
     margin: 0 auto;
-
-    @media (min-width: 640px) {
-        align-self: center;
-    }
 `;
 
 const Layout = ({ theme, children }) => (
     <Container theme={theme}>
-        <Content>
+        <Content theme={theme}>
             { children }
         </Content>
     </Container>

@@ -9,7 +9,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-size: 1.125rem;
-    height: 100vh;
+    font-weight: 400;
 }
 
 h1 {
@@ -19,8 +19,7 @@ h1 {
 }
 
 h2 {
-    font-size: 1.25rem;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 a {

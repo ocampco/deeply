@@ -8,9 +8,11 @@ import * as paths from './paths';
 const routeConfig = [{
     path: paths.PATH_HOME,
     Component: Home,
+    theme: { center: true }
 }, {
     path: paths.PATH_DIFFICULTY,
     Component: Difficulty,
+    theme: { full: true },
 }, {
     path: paths.PATH_INSTRUCTIONS,
     Component: Instructions,
