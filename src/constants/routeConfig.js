@@ -1,5 +1,5 @@
 import Home from '../components/Home';
-import Difficulty from '../components/Difficulty';
+import CategoryContainer from '../components/CategoryContainer';
 import Instructions from '../components/Instructions';
 import Question from '../components/Question';
 import Summary from '../components/Summary';
@@ -11,7 +11,7 @@ const routeConfig = [{
     theme: { center: true }
 }, {
     path: paths.PATH_CATEGORY,
-    Component: Difficulty,
+    Component: CategoryContainer,
     theme: { full: true },
 }, {
     path: paths.PATH_INSTRUCTIONS,

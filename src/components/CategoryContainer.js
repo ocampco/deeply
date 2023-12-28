@@ -1,7 +1,7 @@
 import Emoji from './shared/Emoji';
 import Category from './Category';
 import difficultyLevels from '../constants/difficultyLevels';
-import styles from './Difficulty.module.css';
+import styles from './CategoryContainer.module.css';
 
 // TODO: Clean up
 const PlaceholderDifficultyLevel = () => (
@@ -12,7 +12,7 @@ const PlaceholderDifficultyLevel = () => (
   </li>
 );
 
-const Difficulty = () => (
+const CategoryContainer = () => (
     <>
         <h1>how deep would you like to go?</h1>
         <ul className={styles.levels}>
@@ -35,4 +35,4 @@ const Difficulty = () => (
     </>
 );
 
-export default Difficulty;
+export default CategoryContainer;
