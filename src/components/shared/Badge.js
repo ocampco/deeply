@@ -11,8 +11,13 @@ const Container = styled.div`
   text-transform: uppercase;
 `;
 
-const Badge = ({ secondary, children }) => (
-  <Container secondary={secondary}>{children}</Container>
+const Badge = ({ secondary, className, children }) => (
+  <Container
+    secondary={secondary}
+    className={className}
+  >
+    {children}
+  </Container>
 );
 
 export default Badge;
