@@ -1,10 +1,16 @@
-import { Link, useLocation } from 'react-router-dom';
+import styled from 'styled-components';
+import { useLocation } from 'react-router-dom';
 import BackLink from './shared/BackLink';
 import Emoji from './shared/Emoji';
+import Button from './shared/Button';
 import { PATH_DIFFICULTY, PATH_QUESTION_SEGMENT } from '../constants/paths';
 import styles from './Instructions.module.css';
 
 const DIFFICULTY_BUTTON_TEXT = 'change category';
+
+const StyledButton = styled(Button)`
+  margin: 0 auto;
+`;
 
 const Instructions = () => {
     const { state: { difficulty } } = useLocation();
@@ -25,11 +31,12 @@ const Instructions = () => {
                 </li>
             </ul>
           </div>
-          <div className={styles.button}>
-              <Link to={`${PATH_QUESTION_SEGMENT}/${difficulty}`}>
-                  i'm ready
-              </Link>
-          </div>
+          <StyledButton
+            to={`${PATH_QUESTION_SEGMENT}/${difficulty}`}
+            animate
+          >
+            i'm ready
+          </StyledButton>
         </>
     )
 };
