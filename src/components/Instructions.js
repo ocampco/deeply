@@ -25,6 +25,7 @@ const StyledItem = styled.li`
 `;
 
 const StyledButton = styled(Button)`
+  animation: var(--default-animation);
   margin: 0 auto;
 `;
 
@@ -52,10 +53,7 @@ const Instructions = () => {
               <StyledItem>{TEXT_ITEM_2}</StyledItem>
             </ul>
           </StyledContent>
-          <StyledButton
-            to={`${PATH_QUESTION_SEGMENT}/${difficulty}`}
-            animate
-          >
+          <StyledButton to={`${PATH_QUESTION_SEGMENT}/${difficulty}`}>
             {TEXT_BUTTON_NEXT}
           </StyledButton>
         </>
