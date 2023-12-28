@@ -14,14 +14,14 @@ const Instructions = () => {
           <BackLink path={PATH_DIFFICULTY}>
             {DIFFICULTY_BUTTON_TEXT}
           </BackLink>
-          <div className={styles.instructions}>
+          <div className={styles.content}>
             <h1>before you start</h1>
-            <ul className={styles.items}>
+            <ul>
                 <li className={styles.item}>
-                    please take your time to think about each answer
+                  please take your time to think about each answer
                 </li>
                 <li className={styles.item}>
-                    if you'd like to drink, raise a glass and say <span className={styles.emphasis}>"deep"</span> if the answer resonates with you
+                  if you'd like to drink, raise a glass and say "deep" if the answer resonates with you
                 </li>
             </ul>
           </div>

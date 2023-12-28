@@ -1,16 +1,8 @@
-.instructions {
+.content {
   display: flex;
   flex-grow: 1;
   flex-direction: column;
   justify-content: center;
-}
-
-.items {
-    margin-bottom: 3rem;
-
-    @media (min-width: 560px) {
-        margin-bottom: 2rem;
-    }
 }
 
 .item {
@@ -23,10 +15,6 @@
 
 .item:last-of-type {
     margin-bottom: 0;
-}
-
-.emphasis {
-    font-style: italic;
 }
 
 .button {
