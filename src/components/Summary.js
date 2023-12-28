@@ -1,12 +1,38 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 import Emoji from './shared/Emoji';
-import { ExternalLink, RepeatArrow } from './shared/Icons';
+import NextLink from './shared/NextLink';
+import {
+  ExternalLink,
+  RepeatArrow,
+} from './shared/Icons';
 import {
     PATH_DONATE,
     PATH_DIFFICULTY,
 } from '../constants/paths';
-import styles from './Summary.module.css';
+
+const StyledActions = styled.div`
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+`;
+
+const StyledSubheading = styled.h2`
+  margin-bottom: 1rem;
+`;
+
+const StyledDescription = styled.p`
+  line-height: var(--default-line-height);
+  margin-bottom: 0.25rem;
+`;
+
+const StyledLink = styled.p`
+  text-decoration: underline;
+`;
+
+const StyledNextLink = styled(NextLink)`
+  margin: 0 auto
+`;
 
 const TEXT_HEADING = 'thanks for playing';
 const TEXT_SUBHEADING = 'did you like the game?';
@@ -16,34 +42,23 @@ const TEXT_BUTTON = 'try another';
 
 const Summary = () => (
     <>
-        <div className={styles.actions}>
-          <h1>
-            {TEXT_HEADING} <Emoji label='party popper'>🎉</Emoji>
-          </h1>
-          <h2 className={styles.subheading}>
-            {TEXT_SUBHEADING}
-          </h2>
-          <p className={styles.description}>
-            {TEXT_DESCRIPTION}
-          </p>
+        <StyledActions>
+          <h1>{TEXT_HEADING} <Emoji label='party popper'>🎉</Emoji></h1>
+          <StyledSubheading>{TEXT_SUBHEADING}</StyledSubheading>
+          <StyledDescription>{TEXT_DESCRIPTION}</StyledDescription>
           <a
               href={PATH_DONATE}
               title={TEXT_LINK}
               target='_blank'
               rel='noopener noreferrer'
           >
-            <p className={styles.link}>
-              <ExternalLink />
-              {TEXT_LINK}
-            </p>
+            <StyledLink><ExternalLink />{TEXT_LINK}</StyledLink>
           </a>
-        </div>
-        <div className={styles.restart}>
-          <Link to={`${PATH_DIFFICULTY}`}>
-            {TEXT_BUTTON}
-            <RepeatArrow />
-          </Link>
-        </div>
+        </StyledActions>
+        <StyledNextLink to={`${PATH_DIFFICULTY}`}>
+          {TEXT_BUTTON}
+          <RepeatArrow />
+        </StyledNextLink>
     </>
 );
 
