@@ -15,17 +15,17 @@ const INTIMATE = {
       icon: '💖',
       label: 'sparkling heart',
     },
-    description: 'come out of your shell',
+    description: 'come out of your shell and get to know someone',
 };
 
-const CONTROVERSIAL = {
-    url: 'controversial',
-    displayName: 'controversial',
+const CONFRONTING = {
+    url: 'confronting',
+    displayName: 'confronting',
     emoji: {
       icon: '🌶',
       label: 'hot pepper',
     },
-    description: 'questions that raise more questions',
+    description: 'reflection questions that raise more questions',
 };
 
 const MEMORIES = {
@@ -41,7 +41,7 @@ const MEMORIES = {
 const difficultyLevels = [
     CASUAL,
     INTIMATE,
-    CONTROVERSIAL,
+    CONFRONTING,
     MEMORIES,
 ];
 
