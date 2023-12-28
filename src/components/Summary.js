@@ -7,7 +7,7 @@ import {
 } from './shared/Icons';
 import {
     PATH_DONATE,
-    PATH_DIFFICULTY,
+    PATH_CATEGORY,
 } from '../constants/paths';
 
 const StyledActions = styled.div`
@@ -55,7 +55,7 @@ const Summary = () => (
             <StyledLink><ExternalLink />{TEXT_LINK}</StyledLink>
           </a>
         </StyledActions>
-        <StyledNextLink to={`${PATH_DIFFICULTY}`}>
+        <StyledNextLink to={`${PATH_CATEGORY}`}>
           {TEXT_BUTTON}
           <RepeatArrow />
         </StyledNextLink>

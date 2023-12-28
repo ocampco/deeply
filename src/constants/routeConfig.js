@@ -10,7 +10,7 @@ const routeConfig = [{
     Component: Home,
     theme: { center: true }
 }, {
-    path: paths.PATH_DIFFICULTY,
+    path: paths.PATH_CATEGORY,
     Component: Difficulty,
     theme: { full: true },
 }, {

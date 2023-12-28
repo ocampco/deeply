@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 import BackLink from './shared/BackLink';
 import Emoji from './shared/Emoji';
 import NextLink from './shared/NextLink';
-import { PATH_DIFFICULTY, PATH_QUESTION_SEGMENT } from '../constants/paths';
+import { PATH_CATEGORY, PATH_QUESTION_SEGMENT } from '../constants/paths';
 
 const StyledContent = styled.div`
   display: flex;
@@ -40,7 +40,7 @@ const Instructions = () => {
 
     return (
         <>
-          <BackLink path={PATH_DIFFICULTY}>
+          <BackLink path={PATH_CATEGORY}>
             {TEXT_BUTTON_BACK}
           </BackLink>
           <StyledContent>

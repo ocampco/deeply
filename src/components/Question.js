@@ -8,7 +8,7 @@ import BackLink from './shared/BackLink';
 import Badge from './shared/Badge';
 import NextLink from './shared/NextLink';
 import { ForwardArrow } from './shared/Icons';
-import { PATH_DIFFICULTY, PATH_SUMMARY } from '../constants/paths';
+import { PATH_CATEGORY, PATH_SUMMARY } from '../constants/paths';
 import fixture from '../fixture';
 import styles from './Question.module.css';
 
@@ -73,7 +73,7 @@ const Question = () => {
 
     return (
         <>
-          <BackLink path={PATH_DIFFICULTY}>
+          <BackLink path={PATH_CATEGORY}>
             {BUTTON_TEXT_DIFFICULTY}
           </BackLink>
           <StyledContent>

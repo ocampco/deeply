@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Badge from './shared/Badge';
 import NextLink from './shared/NextLink';
-import { PATH_DIFFICULTY } from '../constants/paths';
+import { PATH_CATEGORY } from '../constants/paths';
 
 const StyledHeading = styled.h1`
   animation: var(--default-animation);
@@ -40,7 +40,7 @@ const Home = () => (
     <StyledHeading>{TEXT_HEADING}</StyledHeading>
     <StyledSubheading>{TEXT_SUBHEADING}</StyledSubheading>
     <StyledBadge>{TEXT_BADGE}</StyledBadge>
-    <StyledNextLink to={PATH_DIFFICULTY}>
+    <StyledNextLink to={PATH_CATEGORY}>
       {TEXT_BUTTON}
     </StyledNextLink>
   </>
