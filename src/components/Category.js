@@ -33,9 +33,11 @@ const PlaceholderContainer = styled(Container)`
   color: var(--default-primary-grey);
   opacity: 60%;
   height: fit-content;
+  padding: 1rem;
 
   @media (min-width: 640px) {
     height: auto;
+    padding: 1.5rem 1rem;
   }
 `;
 
