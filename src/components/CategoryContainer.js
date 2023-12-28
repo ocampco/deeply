@@ -3,6 +3,7 @@ import relativeTime from 'dayjs/plugin/relativeTime';
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Category, { PlaceholderCategory } from './Category';
+import fetchLastUpdated from '../services/githubService';
 import categories from '../constants/categories';
 
 const List = styled.ul`
@@ -23,39 +24,33 @@ const Date = styled.p`
 `;
 
 const TEXT_HEADING = 'how deep would you like to go?';
-const TEXT_DATE = 'last update: ';
+const TEXT_DATE = 'last update:';
 
-const parseDate = (dateString) => {
+// TODO: Migrate logic to API
+const transformDate = (dateString) => {
   dayjs.extend(relativeTime)
 
   return dayjs(dateString).fromNow();
 };
 
-// TODO: Migrate logic to API
 const CategoryContainer = () => {
   const [updateDate, setUpdateDate] = useState();
-  const fetchUrl = 'https://api.github.com/repos/ocampco/deeply/commits/gh-pages';
 
   useEffect(() => {
-    const fetchUpdateDate = async () => {
-      try {
-        const response = await fetch(fetchUrl);
-        const json = await response.json();
-        const date = parseDate(json.commit.author.date);
+    const fetchData = async () => {
+      const dateString = await fetchLastUpdated();
+      const transformedDate = transformDate(dateString);
 
-        setUpdateDate(date);
-      } catch (error) {
-        console.log('Failed to fetch', error);
-      }
+      setUpdateDate(transformedDate);
     };
 
-    fetchUpdateDate();
+    fetchData();
   }, []);
 
   return (
     <>
       <h1>{TEXT_HEADING}</h1>
-      <Date>{TEXT_DATE}{updateDate}</Date>
+      <Date>{TEXT_DATE} {updateDate}</Date>
       <List>
         <PlaceholderCategory />
         { categories.map(({
