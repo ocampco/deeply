@@ -3,17 +3,18 @@ import Badge from './shared/Badge';
 import NextLink from './shared/NextLink';
 import { PATH_CATEGORY } from '../constants/paths';
 
-const StyledHeading = styled.h1`
+const Heading = styled.h1`
   animation: var(--default-animation);
   font-size: 5.5rem;
   margin-bottom: 1.5rem;
+  text-align: center;
 
   @media (min-width: 420px) {
       font-size: 7rem;
   }
 `;
 
-const StyledSubheading = styled.h2`
+const Subheading = styled.h2`
   animation: var(--default-animation);
   margin-bottom: 1rem;
   text-align: center;
@@ -37,8 +38,8 @@ const TEXT_BUTTON = 'start';
 
 const Home = () => (
   <>
-    <StyledHeading>{TEXT_HEADING}</StyledHeading>
-    <StyledSubheading>{TEXT_SUBHEADING}</StyledSubheading>
+    <Heading>{TEXT_HEADING}</Heading>
+    <Subheading>{TEXT_SUBHEADING}</Subheading>
     <StyledBadge>{TEXT_BADGE}</StyledBadge>
     <StyledNextLink to={PATH_CATEGORY}>
       {TEXT_BUTTON}

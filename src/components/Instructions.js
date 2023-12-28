@@ -5,14 +5,14 @@ import Emoji from './shared/Emoji';
 import NextLink from './shared/NextLink';
 import { PATH_CATEGORY, PATH_QUESTION_SEGMENT } from '../constants/paths';
 
-const StyledContent = styled.div`
+const Content = styled.div`
   display: flex;
   flex-grow: 1;
   flex-direction: column;
   justify-content: center;
 `;
 
-const StyledItem = styled.li`
+const Item = styled.li`
   line-height: var(--default-line-height);
   list-style: inside;
   list-style-position: outside;
@@ -43,16 +43,16 @@ const Instructions = () => {
           <BackLink path={PATH_CATEGORY}>
             {TEXT_BUTTON_BACK}
           </BackLink>
-          <StyledContent>
+          <Content>
             <h1>
               {TEXT_HEADING}
               <Emoji label='raised hand'>✋</Emoji>
             </h1>
             <ul>
-              <StyledItem>{TEXT_ITEM_1}</StyledItem>
-              <StyledItem>{TEXT_ITEM_2}</StyledItem>
+              <Item>{TEXT_ITEM_1}</Item>
+              <Item>{TEXT_ITEM_2}</Item>
             </ul>
-          </StyledContent>
+          </Content>
           <StyledNextLink to={`${PATH_QUESTION_SEGMENT}/${category}`}>
             {TEXT_BUTTON_NEXT}
           </StyledNextLink>

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import Category, { PlaceholderCategory } from './Category';
 import categories from '../constants/categories';
 
-const StyledList = styled.ul`
+const List = styled.ul`
   display: grid;
   grid-template-columns: 1fr;
   column-gap: 1rem;
@@ -19,7 +19,7 @@ const TEXT_HEADING = 'how deep would you like to go?';
 const CategoryContainer = () => (
   <>
     <h1>{TEXT_HEADING}</h1>
-    <StyledList>
+    <List>
       <PlaceholderCategory />
       { categories.map(({
         url,
@@ -35,7 +35,7 @@ const CategoryContainer = () => (
           description={description}
         />
       ))}
-    </StyledList>
+    </List>
   </>
 );
 

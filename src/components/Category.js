@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Emoji from './shared/Emoji';
 import { PATH_INSTRUCTIONS } from '../constants/paths';
 
-const StyledCategory = styled.li`
+const Container = styled.li`
   border-radius: var(--default-border-radius);
   background-color: var(--default-primary-white);
   box-shadow: var(--default-box-shadow);
@@ -14,7 +14,7 @@ const StyledCategory = styled.li`
   padding: 1.5rem 1rem;
 `;
 
-const StyledName = styled.h2`
+const Name = styled.h2`
   margin-bottom: 0.5rem;
   font-weight: 700;
 
@@ -23,13 +23,13 @@ const StyledName = styled.h2`
   }
 `;
 
-const StyledDescription = styled.p`
+const Description = styled.p`
   color: var(--default-primary-grey);
   line-height: var(--default-line-height);
   font-weight: 400;
 `;
 
-const StyledPlaceholderCategory = styled(StyledCategory)`
+const PlaceholderContainer = styled(Container)`
   color: var(--default-primary-grey);
   opacity: 60%;
   height: fit-content;
@@ -40,11 +40,11 @@ const StyledPlaceholderCategory = styled(StyledCategory)`
 `;
 
 export const PlaceholderCategory = () => (
-  <StyledPlaceholderCategory>
-    <StyledName>
+  <PlaceholderContainer>
+    <Name>
       user submitted - unavailable <Emoji label='construction'>🚧</Emoji>
-    </StyledName>
-  </StyledPlaceholderCategory>
+    </Name>
+  </PlaceholderContainer>
 );
 
 const Category = ({
@@ -56,19 +56,19 @@ const Category = ({
   },
   description,
 }) => (
-  <StyledCategory>
+  <Container>
     <Link
       to={PATH_INSTRUCTIONS}
       state={{ category: url }}
     >
-      <StyledName>
+      <Name>
         {displayName} <Emoji label={label}>{icon}</Emoji>
-      </StyledName>
-      <StyledDescription>
+      </Name>
+      <Description>
         {description}
-      </StyledDescription>
+      </Description>
     </Link>
-  </StyledCategory>
+  </Container>
 );
 
 export default Category
