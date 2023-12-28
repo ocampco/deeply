@@ -15,7 +15,7 @@ import styles from './Question.module.css';
 const BUTTON_TEXT_BACK = 'change category';
 const BUTTON_TEXT_NEXT = 'next question';
 const BUTTON_TEXT_END = 'finish';
-const MAX_QUESTIONS = 5;
+const MAX_QUESTIONS = 6;
 
 // TODO: Use Link component for routing
 // TODO: Pull from db
