@@ -2,29 +2,48 @@ import styled from 'styled-components';
 import Badge from './shared/Badge';
 import Button from './shared/Button';
 import { PATH_DIFFICULTY } from '../constants/paths';
-// TODO: Migrate all to styled components
-import styles from './Home.module.css';
+
+const StyledHeading = styled.h1`
+  animation: var(--default-animation);
+  font-size: 5.5rem;
+  margin-bottom: 1.5rem;
+
+  @media (min-width: 420px) {
+      font-size: 7rem;
+  }
+`;
+
+const StyledSubheading = styled.h2`
+  animation: var(--default-animation);
+  margin-bottom: 1rem;
+  text-align: center;
+`;
+
+const StyledBadge = styled(Badge)`
+  animation: var(--default-animation);
+  align-self: center;
+  margin-bottom: 2.5rem;
+`
+
+const StyledButton = styled(Button)`
+  animation: var(--default-animation);
+  margin: 0 auto;
+`;
 
 const TEXT_HEADING = 'deeply';
 const TEXT_SUBHEADING = 'meaningful questions, better connections';
 const TEXT_BADGE = 'early access';
 const TEXT_BUTTON = 'start';
 
-const StyledButton = styled(Button)`
-  margin: 0 auto;
-`;
-
 const Home = () => (
-    <>
-        <h1 className={styles.heading}>{TEXT_HEADING}</h1>
-        <h2 className={styles.subheading}>{TEXT_SUBHEADING}</h2>
-        <span className={styles.badge}>
-          <Badge>{TEXT_BADGE}</Badge>
-        </span>
-        <StyledButton to={PATH_DIFFICULTY} animate>
-          {TEXT_BUTTON}
-        </StyledButton>
-    </>
+  <>
+    <StyledHeading>{TEXT_HEADING}</StyledHeading>
+    <StyledSubheading>{TEXT_SUBHEADING}</StyledSubheading>
+    <StyledBadge>{TEXT_BADGE}</StyledBadge>
+    <StyledButton to={PATH_DIFFICULTY}>
+      {TEXT_BUTTON}
+    </StyledButton>
+  </>
 );
 
 export default Home;
