@@ -1,13 +1,15 @@
+/* TODO: Understand why there are duplicates */
 * {
   font-family: 'Poppins', sans-serif;
 }
 
-body {
-    margin: 0;
+#root {
     font-family: 'Poppins', sans-serif;
+    margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-size: 1.125rem;
+    height: 100vh;
 }
 
 h1 {
