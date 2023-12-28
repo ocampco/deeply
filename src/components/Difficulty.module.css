@@ -10,15 +10,9 @@
     }
 }
 
-.level {
-    composes: button from '../styles/constants.module.css';
-    height: auto;
-    width: auto;
-    padding: 1.5rem 1rem;
-}
-
 .placeholderLevel {
-  composes: level;
+  /* TODO */
+  /* composes: level; */
   color: var(--default-primary-grey);
   opacity: 60%;
   height: fit-content;
@@ -26,19 +20,4 @@
   @media (min-width: 640px) {
     height: auto;
   }
-}
-
-.name {
-    margin-bottom: 0.5rem;
-    font-weight: 700;
-
-    @media (min-width: 640px) {
-      margin-bottom: 1rem;
-    }
-}
-
-.description {
-    color: var(--default-primary-grey);
-    line-height: var(--default-line-height);
-    font-weight: 400;
 }
