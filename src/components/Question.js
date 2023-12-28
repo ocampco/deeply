@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import shuffle from 'lodash/shuffle';
 import drop from 'lodash/drop';
 import slice from 'lodash/slice';
 import { Link, useParams } from 'react-router-dom';
-import BackLink from './BackLink';
-import Badge from './Badge';
-import { ForwardArrow } from './Icons';
+import BackLink from './shared/BackLink';
+import Badge from './shared/Badge';
+import { ForwardArrow } from './shared/Icons';
 import { PATH_DIFFICULTY, PATH_SUMMARY } from '../constants/paths';
 import fixture from '../fixture';
 import styles from './Question.module.css';

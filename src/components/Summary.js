@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Emoji from './Emoji';
-import { ExternalLink, RepeatArrow } from './Icons';
+import Emoji from './shared/Emoji';
+import { ExternalLink, RepeatArrow } from './shared/Icons';
 import {
     PATH_DONATE,
     PATH_DIFFICULTY,

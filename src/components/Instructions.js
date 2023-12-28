@@ -1,6 +1,5 @@
-import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import BackLink from './BackLink';
+import BackLink from './shared/BackLink';
 import { PATH_DIFFICULTY, PATH_QUESTION_SEGMENT } from '../constants/paths';
 import styles from './Instructions.module.css';
 

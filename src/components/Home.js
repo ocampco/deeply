@@ -1,6 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import Badge from './Badge';
+import Badge from './shared/Badge';
 import { PATH_DIFFICULTY } from '../constants/paths';
 // TODO: Migrate all to styled components
 import styles from './Home.module.css';

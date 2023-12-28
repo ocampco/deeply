@@ -2,7 +2,7 @@ import {
     ScrollRestoration,
     createBrowserRouter,
 } from 'react-router-dom';
-import Layout from './components/Layout';
+import Layout from './components/shared/Layout';
 import routeConfig from './constants/routeConfig';
 import { PATH_BASE } from './constants/paths';
 

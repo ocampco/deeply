@@ -1,6 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import Emoji from './Emoji';
+import Emoji from './shared/Emoji';
 import difficultyLevels from '../constants/difficultyLevels';
 import { PATH_INSTRUCTIONS } from '../constants/paths';
 import styles from './Difficulty.module.css';
