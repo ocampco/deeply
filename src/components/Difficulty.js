@@ -28,6 +28,16 @@ const DifficultyLevel = ({
     </li>
 );
 
+// TODO: Clean up
+const PlaceholderDifficultyLevel = () => (
+  <li className={styles.level}>
+    <h2 className={styles.name}>
+      user submitted <Emoji label='construction'>🚧</Emoji>
+    </h2>
+    <p className={styles.description}>coming soon</p>
+  </li>
+);
+
 const Difficulty = () => (
     <>
         <h1>how deep would you like to go?</h1>
@@ -38,14 +48,15 @@ const Difficulty = () => (
           emoji,
           description,
         }) => (
-            <DifficultyLevel
-                key={url}
-                url={url}
-                displayName={displayName}
-                emoji={emoji}
-                description={description}
-            />
+          <DifficultyLevel
+              key={url}
+              url={url}
+              displayName={displayName}
+              emoji={emoji}
+              description={description}
+          />
         ))}
+        <PlaceholderDifficultyLevel />
         </ul>
     </>
 );
