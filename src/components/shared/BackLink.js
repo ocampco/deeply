@@ -13,9 +13,10 @@ const Text = styled(Link)`
 
 const BackLink = ({
   path,
+  className,
   children,
 }) => (
-  <Container>
+  <Container className={className}>
     <BackArrow />
     <Text to={path}>
       {children}
