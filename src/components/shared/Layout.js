@@ -18,7 +18,11 @@ const Container = styled.div`
     padding: 2rem 1.5rem 3rem;
     box-sizing: border-box;
 
-    @media (min-width: 640px) {
+    @media (min-width: 480px) {
+      padding: 1.5rem 1rem 2.5rem;
+    }
+
+    @media (min-width: 668px) {
         display: flex;
         height: 100vh;
         padding: ${props => props.theme.full

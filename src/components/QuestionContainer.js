@@ -35,11 +35,35 @@ const QuestionButton = ({ clickFn }) => (
   </Button>
 );
 
+const StyledBackLink = styled(BackLink)`
+  margin-bottom: 2rem;
+
+  @media (min-width: 480px) {
+    margin-bottom: 1.5rem;
+  }
+
+  @media (min-width: 668px) {
+    margin-bottom: 3rem;
+  }
+`;
+
 const Content = styled.div`
   display: flex;
   flex-grow: 1;
   flex-direction: column;
   justify-content: center;
+  // TODO: Use less hacky solution
+  // https://stackoverflow.com/questions/75368940/in-container-with-flex-grow-1-the-content-is-overflowing-when-it-should-be-scro
+  height: 1px;
+  margin-bottom: 2rem;
+
+  @media (min-width: 480px) {
+    margin-bottom: 1.5rem;
+  }
+
+  @media (min-width: 668px) {
+    margin-bottom: 3rem;
+  }
 `;
 
 const StyledNextLink = styled(NextLink)`
@@ -62,9 +86,9 @@ const QuestionContainer = () => {
 
   return (
     <>
-      <BackLink path={PATH_CATEGORY}>
+      <StyledBackLink path={PATH_CATEGORY}>
         {BUTTON_TEXT_BACK}
-      </BackLink>
+      </StyledBackLink>
       <Content>
         <Question question={questionList[0].question} />
       </Content>

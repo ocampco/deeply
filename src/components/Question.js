@@ -6,8 +6,7 @@ const StyledBadge = styled(Badge)`
 `;
 
 const Heading = styled.h1`
-  max-height: 55vh;
-  overflow: scroll;
+  overflow-y: scroll;
   font-size: 2rem;
   line-height: var(--default-line-height);
   margin-bottom: 0;
