@@ -15,7 +15,7 @@ const Container = styled.div`
       : '100vh'
     };
     width: 100%;
-    padding: 2rem 1.5rem;
+    padding: 2rem 1.5rem 3rem;
     box-sizing: border-box;
 
     @media (min-width: 640px) {
