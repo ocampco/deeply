@@ -1,24 +1,19 @@
 import { useState } from 'react';
 import styled from 'styled-components';
-import shuffle from 'lodash/shuffle';
 import drop from 'lodash/drop';
-import slice from 'lodash/slice';
 import { useParams } from 'react-router-dom';
 import BackLink from './shared/BackLink';
 import Badge from './shared/Badge';
 import NextLink from './shared/NextLink';
+import fetchQuestion from './../services/mockService';
 import { ForwardArrow } from './shared/Icons';
 import { PATH_CATEGORY, PATH_SUMMARY } from '../constants/paths';
-import fixture from '../fixture';
 
 const BUTTON_TEXT_BACK = 'change category';
 const BUTTON_TEXT_NEXT = 'next question';
 const BUTTON_TEXT_END = 'finish';
-const MAX_QUESTIONS = 6;
 
 // TODO: Use Link component for routing
-// TODO: Migrate logic to API
-
 const Button = styled.button`
   border: none;
   color: var(--default-primary-brown);
@@ -63,24 +58,17 @@ const StyledNextLink = styled(NextLink)`
   align-self: flex-end;
 `;
 
-const getShuffledQuestions = (questionList, category) => {
-    const questions = questionList[category];
-
-    return shuffle(questions);
-}
-
 const updateQuestionList = (
     questionList,
     setQuestionList,
 ) => {
     const newQuestionList = drop(questionList);
     setQuestionList(newQuestionList);
-}
+};
 
 const Question = () => {
     const { category } = useParams();
-    const shuffledQuestions = getShuffledQuestions(fixture, category);
-    const questions = slice(shuffledQuestions, 0, MAX_QUESTIONS);
+    const questions = fetchQuestion(category);
     const [questionList, setQuestionList] = useState(questions);
     const hasQuestions = questionList.length > 1;
 
@@ -91,7 +79,7 @@ const Question = () => {
           </BackLink>
           <Content>
             <StyledBadge secondary>deeply original</StyledBadge>
-            <Heading>{questionList[0]}</Heading>
+            <Heading>{questionList[0].question}</Heading>
           </Content>
           { hasQuestions
               ? <QuestionButton clickFn={() => updateQuestionList(questionList, setQuestionList)} />
