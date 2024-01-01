@@ -1,7 +1,7 @@
 import Home from '../components/Home';
 import CategoryContainer from '../components/CategoryContainer';
 import Instructions from '../components/Instructions';
-import Question from '../components/Question';
+import QuestionContainer from '../components/QuestionContainer';
 import Summary from '../components/Summary';
 import * as paths from './paths';
 
@@ -18,7 +18,7 @@ const routeConfig = [{
     Component: Instructions,
 }, {
     path: paths.PATH_QUESTION,
-    Component: Question,
+    Component: QuestionContainer,
     theme: { secondary: true },
 }, {
     path: paths.PATH_SUMMARY,
