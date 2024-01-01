@@ -48,7 +48,7 @@ const Content = styled.div`
 `;
 
 const Heading = styled.h1`
-  max-height: 25rem;
+  max-height: 55vh;
   overflow: scroll;
   font-size: 2rem;
   line-height: var(--default-line-height);
