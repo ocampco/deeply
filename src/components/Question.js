@@ -47,6 +47,10 @@ const Content = styled.div`
   justify-content: center;
 `;
 
+const StyledBadge = styled(Badge)`
+  margin-bottom: 1rem;
+`;
+
 const Heading = styled.h1`
   max-height: 55vh;
   overflow: scroll;
@@ -86,7 +90,7 @@ const Question = () => {
             {BUTTON_TEXT_BACK}
           </BackLink>
           <Content>
-            <Badge secondary>deeply original</Badge>
+            <StyledBadge secondary>deeply original</StyledBadge>
             <Heading>{questionList[0]}</Heading>
           </Content>
           { hasQuestions
