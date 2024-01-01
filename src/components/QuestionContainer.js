@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import drop from 'lodash/drop';
 import { useParams } from 'react-router-dom';
 import BackLink from './shared/BackLink';
-import Badge from './shared/Badge';
+import Question from './Question';
 import NextLink from './shared/NextLink';
 import fetchQuestion from './../services/mockService';
 import { ForwardArrow } from './shared/Icons';
@@ -26,13 +26,13 @@ const Button = styled.button`
 `;
 
 const QuestionButton = ({ clickFn }) => (
-    <Button
-      type='button'
-      onClick={clickFn}
-    >
-      {BUTTON_TEXT_NEXT}
-      <ForwardArrow />
-    </Button>
+  <Button
+    type='button'
+    onClick={clickFn}
+  >
+    {BUTTON_TEXT_NEXT}
+    <ForwardArrow />
+  </Button>
 );
 
 const Content = styled.div`
@@ -42,51 +42,38 @@ const Content = styled.div`
   justify-content: center;
 `;
 
-const StyledBadge = styled(Badge)`
-  margin-bottom: 1rem;
-`;
-
-const Heading = styled.h1`
-  max-height: 55vh;
-  overflow: scroll;
-  font-size: 2rem;
-  line-height: var(--default-line-height);
-  margin-bottom: 0;
-`;
-
 const StyledNextLink = styled(NextLink)`
   align-self: flex-end;
 `;
 
 const updateQuestionList = (
-    questionList,
-    setQuestionList,
+  questionList,
+  setQuestionList,
 ) => {
-    const newQuestionList = drop(questionList);
-    setQuestionList(newQuestionList);
+  const newQuestionList = drop(questionList);
+  setQuestionList(newQuestionList);
 };
 
 const QuestionContainer = () => {
-    const { category } = useParams();
-    const questions = fetchQuestion(category);
-    const [questionList, setQuestionList] = useState(questions);
-    const hasQuestions = questionList.length > 1;
+  const { category } = useParams();
+  const questions = fetchQuestion(category);
+  const [questionList, setQuestionList] = useState(questions);
+  const hasQuestions = questionList.length > 1;
 
-    return (
-        <>
-          <BackLink path={PATH_CATEGORY}>
-            {BUTTON_TEXT_BACK}
-          </BackLink>
-          <Content>
-            <StyledBadge secondary>deeply original</StyledBadge>
-            <Heading>{questionList[0].question}</Heading>
-          </Content>
-          { hasQuestions
-              ? <QuestionButton clickFn={() => updateQuestionList(questionList, setQuestionList)} />
-              : <StyledNextLink to={PATH_SUMMARY}>{BUTTON_TEXT_END}<ForwardArrow /></StyledNextLink>
-          }
-        </>
-    )
-}
+  return (
+    <>
+      <BackLink path={PATH_CATEGORY}>
+        {BUTTON_TEXT_BACK}
+      </BackLink>
+      <Content>
+        <Question question={questionList[0].question} />
+      </Content>
+      { hasQuestions
+        ? <QuestionButton clickFn={() => updateQuestionList(questionList, setQuestionList)} />
+        : <StyledNextLink to={PATH_SUMMARY}>{BUTTON_TEXT_END}<ForwardArrow /></StyledNextLink>
+      }
+    </>
+  );
+};
 
 export default QuestionContainer;
