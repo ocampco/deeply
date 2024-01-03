@@ -7,9 +7,13 @@ const StyledBadge = styled(Badge)`
 
 const Heading = styled.h1`
   overflow-y: scroll;
-  font-size: 2rem;
+  font-size: 5.5vh;
   line-height: var(--default-line-height);
   margin-bottom: 0;
+
+  @media (orientation: landscape) {
+    font-size: 4vw;
+  }
 `;
 
 const Question = ({ question }) => (
