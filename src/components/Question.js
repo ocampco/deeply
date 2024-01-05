@@ -18,7 +18,7 @@ const Heading = styled.h1`
 
 const Question = ({ question }) => (
   <>
-    <StyledBadge secondary>deeply original</StyledBadge>
+    <StyledBadge secondary>original</StyledBadge>
     <Heading>{question}</Heading>
   </>
 );
