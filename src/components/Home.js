@@ -5,12 +5,12 @@ import { PATH_CATEGORY } from '../constants/paths';
 
 const Heading = styled.h1`
   animation: var(--default-animation);
-  font-size: 5.5rem;
+  font-size: 10vh;
   margin-bottom: 1.5rem;
   text-align: center;
 
-  @media (min-width: 420px) {
-      font-size: 7rem;
+  @media (orientation: landscape) {
+    font-size: 16vh;
   }
 `;
 
