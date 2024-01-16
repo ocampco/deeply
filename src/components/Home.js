@@ -5,26 +5,26 @@ import { PATH_CATEGORY } from '../constants/paths';
 
 const Heading = styled.h1`
   animation: var(--default-animation);
-  font-size: 10vh;
+  font-size: calc(2rem + 6vh);
   margin-bottom: 1.5rem;
   text-align: center;
 
   @media (orientation: landscape) {
-    font-size: 16vh;
+    font-size: calc(2rem + 10vh);
   }
-`;
-
-const Subheading = styled.h2`
-  animation: var(--default-animation);
-  margin-bottom: 1rem;
-  text-align: center;
 `;
 
 const StyledBadge = styled(Badge)`
   animation: var(--default-animation);
   align-self: center;
+  margin-bottom: 1rem;
+`;
+
+  const Subheading = styled.h2`
+  animation: var(--default-animation);
+  text-align: center;
   margin-bottom: 2.5rem;
-`
+`;
 
 const StyledNextLink = styled(NextLink)`
   animation: var(--default-animation);
@@ -39,8 +39,8 @@ const TEXT_BUTTON = 'start';
 const Home = () => (
   <>
     <Heading>{TEXT_HEADING}</Heading>
-    <Subheading>{TEXT_SUBHEADING}</Subheading>
     <StyledBadge>{TEXT_BADGE}</StyledBadge>
+    <Subheading>{TEXT_SUBHEADING}</Subheading>
     <StyledNextLink to={PATH_CATEGORY}>
       {TEXT_BUTTON}
     </StyledNextLink>
