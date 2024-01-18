@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 import Emoji from './shared/Emoji';
 import NextLink from './shared/NextLink';
+import ExternalLink from './shared/ExternalLink';
 import {
-  ExternalLink,
+  OpenExternalLink,
   RepeatArrow,
 } from './shared/Icons';
 import {
@@ -45,31 +46,29 @@ const TEXT_LINK = 'buy me a coffee';
 const TEXT_BUTTON = 'try another';
 
 const Summary = () => (
-    <>
-        <Content>
-          <h1>
-            {TEXT_HEADING}
-            <StyledEmoji label='party popper'>🎉</StyledEmoji>
-          </h1>
-          <Subheading>{TEXT_SUBHEADING}</Subheading>
-          <Description>{TEXT_DESCRIPTION}</Description>
-          <a
-              href={PATH_DONATE}
-              title={TEXT_LINK}
-              target='_blank'
-              rel='noopener noreferrer'
-          >
-            <LinkText>
-              <ExternalLink />
-              {TEXT_LINK}
-            </LinkText>
-          </a>
-        </Content>
-        <StyledNextLink to={`${PATH_CATEGORY}`}>
-          {TEXT_BUTTON}
-          <RepeatArrow />
-        </StyledNextLink>
-    </>
+  <>
+    <Content>
+      <h1>
+        {TEXT_HEADING}
+        <StyledEmoji label='party popper'>🎉</StyledEmoji>
+      </h1>
+      <Subheading>{TEXT_SUBHEADING}</Subheading>
+      <Description>{TEXT_DESCRIPTION}</Description>
+      <ExternalLink
+        to={PATH_DONATE}
+        title={TEXT_LINK}
+      >
+        <LinkText>
+          <OpenExternalLink />
+          {TEXT_LINK}
+        </LinkText>
+      </ExternalLink>
+    </Content>
+    <StyledNextLink to={`${PATH_CATEGORY}`}>
+      {TEXT_BUTTON}
+      <RepeatArrow />
+    </StyledNextLink>
+  </>
 );
 
 export default Summary;
