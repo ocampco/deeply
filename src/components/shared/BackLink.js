@@ -7,7 +7,7 @@ const Container = styled.div`
   flex-direction: row;
 `;
 
-const Text = styled(Link)`
+const StyledLink = styled(Link)`
   color: inherit;
 `;
 
@@ -18,9 +18,9 @@ const BackLink = ({
 }) => (
   <Container className={className}>
     <BackArrow />
-    <Text to={path}>
+    <StyledLink to={path}>
       {children}
-    </Text>
+    </StyledLink>
   </Container>
 );
 
