@@ -19,7 +19,7 @@ const BackLink = ({
   <StyledLink to={to}>
     <Container className={className}>
       <BackArrow />
-        {children}
+      {children}
     </Container>
   </StyledLink>
 );

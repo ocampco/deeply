@@ -20,7 +20,7 @@ const StyledBadge = styled(Badge)`
   margin-bottom: 1rem;
 `;
 
-  const Subheading = styled.h2`
+const Subheading = styled.h2`
   animation: var(--default-animation);
   text-align: center;
   margin-bottom: 2.5rem;

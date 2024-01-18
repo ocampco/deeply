@@ -8,7 +8,10 @@ const NextLink = ({
   children,
 }) => (
   <Link to={to}>
-    <Button className={className} secondary={secondary}>
+    <Button
+      className={className}
+      secondary={secondary}
+    >
       {children}
     </Button>
   </Link>

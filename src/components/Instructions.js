@@ -40,28 +40,28 @@ const TEXT_ITEM_1 = 'please take your time to think about each answer';
 const TEXT_ITEM_2 = 'if you\'d like to drink, raise a glass and say "deep" if the answer resonates with you';
 
 const Instructions = () => {
-    const { state: { category } } = useLocation();
+  const { state: { category } } = useLocation();
 
-    return (
-        <>
-          <BackLink to={PATH_CATEGORY}>
-            {TEXT_BUTTON_BACK}
-          </BackLink>
-          <Content>
-            <h1>
-              {TEXT_HEADING}
-              <StyledEmoji label='raised hand'>✋</StyledEmoji>
-            </h1>
-            <ul>
-              <Item>{TEXT_ITEM_1}</Item>
-              <Item>{TEXT_ITEM_2}</Item>
-            </ul>
-          </Content>
-          <StyledNextLink to={`${PATH_QUESTION_SEGMENT}/${category}`}>
-            {TEXT_BUTTON_NEXT}
-          </StyledNextLink>
-        </>
-    )
+  return (
+    <>
+      <BackLink to={PATH_CATEGORY}>
+        {TEXT_BUTTON_BACK}
+      </BackLink>
+      <Content>
+        <h1>
+          {TEXT_HEADING}
+          <StyledEmoji label='raised hand'>✋</StyledEmoji>
+        </h1>
+        <ul>
+          <Item>{TEXT_ITEM_1}</Item>
+          <Item>{TEXT_ITEM_2}</Item>
+        </ul>
+      </Content>
+      <StyledNextLink to={`${PATH_QUESTION_SEGMENT}/${category}`}>
+        {TEXT_BUTTON_NEXT}
+      </StyledNextLink>
+    </>
+  )
 };
 
 export default Instructions;

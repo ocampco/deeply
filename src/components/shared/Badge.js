@@ -5,13 +5,23 @@ const Container = styled.div`
   padding: 0.25rem 0.5rem;
   margin-bottom: 0.25rem;
   font-size: 1rem;
-  color: ${ props => props.secondary ? 'var(--default-primary-brown)' : 'var(--default-primary-beige)'};
-  background-color: ${ props => props.secondary ? 'var(--default-primary-beige)' : 'var(--default-primary-brown)'};
+  color: ${props => props.secondary
+    ? 'var(--default-primary-brown)'
+    : 'var(--default-primary-beige)'
+  };
+  background-color: ${props => props.secondary
+    ? 'var(--default-primary-beige)'
+    : 'var(--default-primary-brown)'
+  };
   border-radius: var(--default-border-radius);
   text-transform: uppercase;
 `;
 
-const Badge = ({ secondary, className, children }) => (
+const Badge = ({
+  secondary,
+  className,
+  children,
+}) => (
   <Container
     secondary={secondary}
     className={className}

@@ -17,8 +17,15 @@ const Container = styled.div`
   font-weight: 700;
 `;
 
-const Button = ({ className, secondary, children }) => (
-  <Container className={className} secondary={secondary}>
+const Button = ({
+  className,
+  secondary,
+  children,
+}) => (
+  <Container
+    className={className}
+    secondary={secondary}
+  >
     {children}
   </Container>
 );
