@@ -4,10 +4,11 @@ import { Link } from 'react-router-dom';
 const NextLink = ({
   to,
   className,
+  secondary,
   children,
 }) => (
-  <Link to={to} className={className}>
-    <Button>
+  <Link to={to}>
+    <Button className={className} secondary={secondary}>
       {children}
     </Button>
   </Link>
