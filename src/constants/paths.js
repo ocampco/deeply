@@ -7,3 +7,4 @@ export const PATH_QUESTION = `${PATH_QUESTION_SEGMENT}/:category`;
 export const PATH_SUMMARY = '/summary';
 export const PATH_DONATE = 'https://www.buymeacoffee.com/ocampco';
 export const PATH_GITHUB = 'https://api.github.com/repos/ocampco/deeply/commits/gh-pages';
+export const PATH_ADD_QUESTION = 'https://yjytzbsl7vn.typeform.com/to/nK47TSxU';

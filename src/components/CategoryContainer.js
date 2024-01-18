@@ -2,9 +2,13 @@ import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import Category, { PlaceholderCategory } from './Category';
+import Category from './Category';
+import Button from './shared/Button';
+import ExternalLink from './shared/ExternalLink';
+import { Add } from './shared/Icons';
 import fetchLastUpdated from '../services/githubService';
 import categories from '../constants/categories';
+import { PATH_ADD_QUESTION } from '../constants/paths';
 
 const List = styled.ul`
   display: grid;
@@ -23,8 +27,15 @@ const Date = styled.p`
   margin-bottom: 2rem;
 `;
 
+const StyledButton = styled(Button)`
+  font-weight: 400;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+`;
+
 const TEXT_HEADING = 'how deep would you like to go?';
 const TEXT_DATE = 'last update:';
+const TEXT_ADD_QUESTION = 'suggest question';
 
 // TODO: Migrate logic to API
 const transformDate = (dateString) => {
@@ -51,8 +62,15 @@ const CategoryContainer = () => {
     <>
       <h1>{TEXT_HEADING}</h1>
       <Date>{TEXT_DATE} {updateDate}</Date>
+      <ExternalLink
+        to={PATH_ADD_QUESTION}
+        title={TEXT_ADD_QUESTION}
+      >
+        <StyledButton secondary>
+          <Add />{TEXT_ADD_QUESTION}
+        </StyledButton>
+      </ExternalLink>
       <List>
-        <PlaceholderCategory />
         { categories.map(({
           url,
           displayName,

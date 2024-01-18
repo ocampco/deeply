@@ -4,6 +4,7 @@ import {
   IoIosArrowForward,
   IoMdRepeat,
   IoMdOpen,
+  IoMdAddCircle,
 } from 'react-icons/io';
 
 export const BackArrow = styled(IoIosArrowBack)`
@@ -22,7 +23,12 @@ export const RepeatArrow = styled(IoMdRepeat)`
   margin-left: 0.25rem;
 `;
 
-export const ExternalLink = styled(IoMdOpen)`
+export const OpenExternalLink = styled(IoMdOpen)`
+  vertical-align: middle;
+  margin-right: 0.25rem;
+`;
+
+export const Add = styled(IoMdAddCircle)`
   vertical-align: middle;
   margin-right: 0.25rem;
 `;
