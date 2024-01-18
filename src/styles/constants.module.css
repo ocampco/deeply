@@ -35,6 +35,5 @@
     background-color: var(--default-primary-white);
     box-shadow: var(--default-box-shadow);
     padding: 1rem 2rem;
-    font-size: 1.125rem;
     font-weight: 700;
 }

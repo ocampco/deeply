@@ -21,7 +21,6 @@ const Button = styled.button`
   border-radius: var(--default-border-radius);
   box-shadow: var(--default-box-shadow);
   padding: 1rem 2rem;
-  font-size: 1.125rem;
   font-weight: 700;
 `;
 
