@@ -44,7 +44,7 @@ const Instructions = () => {
 
     return (
         <>
-          <BackLink path={PATH_CATEGORY}>
+          <BackLink to={PATH_CATEGORY}>
             {TEXT_BUTTON_BACK}
           </BackLink>
           <Content>

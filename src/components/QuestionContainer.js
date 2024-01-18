@@ -85,7 +85,7 @@ const QuestionContainer = () => {
 
   return (
     <>
-      <StyledBackLink path={PATH_CATEGORY}>
+      <StyledBackLink to={PATH_CATEGORY}>
         {BUTTON_TEXT_BACK}
       </StyledBackLink>
       <Content>

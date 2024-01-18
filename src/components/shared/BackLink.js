@@ -12,16 +12,16 @@ const StyledLink = styled(Link)`
 `;
 
 const BackLink = ({
-  path,
+  to,
   className,
   children,
 }) => (
-  <Container className={className}>
-    <BackArrow />
-    <StyledLink to={path}>
-      {children}
-    </StyledLink>
-  </Container>
+  <StyledLink to={to}>
+    <Container className={className}>
+      <BackArrow />
+        {children}
+    </Container>
+  </StyledLink>
 );
 
 export default BackLink;
