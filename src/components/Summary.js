@@ -3,8 +3,8 @@ import Emoji from './shared/Emoji';
 import NextLink from './shared/NextLink';
 import ExternalLink from './shared/ExternalLink';
 import {
-  OpenExternalLink,
-  RepeatArrow,
+  OpenExternalLinkIcon,
+  RepeatArrowIcon,
 } from './shared/Icons';
 import {
     PATH_DONATE,
@@ -59,14 +59,14 @@ const Summary = () => (
           to={PATH_DONATE}
           title={TEXT_LINK}
         >
-        <OpenExternalLink />
+        <OpenExternalLinkIcon />
         {TEXT_LINK}
         </ExternalLink>
       </LinkText>
     </Content>
     <StyledNextLink to={`${PATH_CATEGORY}`}>
       {TEXT_BUTTON}
-      <RepeatArrow />
+      <RepeatArrowIcon />
     </StyledNextLink>
   </>
 );

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { BackArrow } from './Icons';
+import { BackArrowIcon } from './Icons';
 
 const Container = styled.div`
   display: flex;
@@ -18,7 +18,7 @@ const BackLink = ({
 }) => (
   <Container className={className}>
     <StyledLink to={to}>
-      <BackArrow />
+      <BackArrowIcon />
       {children}
     </StyledLink>
   </Container>

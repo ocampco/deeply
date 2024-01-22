@@ -6,7 +6,7 @@ import BackLink from './shared/BackLink';
 import Question from './Question';
 import NextLink from './shared/NextLink';
 import fetchQuestion from './../services/mockService';
-import { ForwardArrow } from './shared/Icons';
+import { ForwardArrowIcon } from './shared/Icons';
 import { PATH_CATEGORY, PATH_SUMMARY } from '../constants/paths';
 
 const BUTTON_TEXT_BACK = 'change category';
@@ -30,7 +30,7 @@ const QuestionButton = ({ clickFn }) => (
     onClick={clickFn}
   >
     {BUTTON_TEXT_NEXT}
-    <ForwardArrow />
+    <ForwardArrowIcon />
   </Button>
 );
 
@@ -93,7 +93,7 @@ const QuestionContainer = () => {
       </Content>
       { hasQuestions
         ? <QuestionButton clickFn={() => updateQuestionList(questionList, setQuestionList)} />
-        : <StyledNextLink to={PATH_SUMMARY}>{BUTTON_TEXT_END}<ForwardArrow /></StyledNextLink>
+        : <StyledNextLink to={PATH_SUMMARY}>{BUTTON_TEXT_END}<ForwardArrowIcon /></StyledNextLink>
       }
     </>
   );
