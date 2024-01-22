@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/deeply/static/css/main.08d2cc1c.css",
-    "main.js": "/deeply/static/js/main.b501dc0e.js",
+    "main.css": "/deeply/static/css/main.e9417296.css",
+    "main.js": "/deeply/static/js/main.a53ef828.js",
     "static/js/787.aef3fcb1.chunk.js": "/deeply/static/js/787.aef3fcb1.chunk.js",
     "service-worker.js": "/deeply/service-worker.js",
     "index.html": "/deeply/index.html",
-    "main.08d2cc1c.css.map": "/deeply/static/css/main.08d2cc1c.css.map",
-    "main.b501dc0e.js.map": "/deeply/static/js/main.b501dc0e.js.map",
+    "main.e9417296.css.map": "/deeply/static/css/main.e9417296.css.map",
+    "main.a53ef828.js.map": "/deeply/static/js/main.a53ef828.js.map",
     "787.aef3fcb1.chunk.js.map": "/deeply/static/js/787.aef3fcb1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.08d2cc1c.css",
-    "static/js/main.b501dc0e.js"
+    "static/css/main.e9417296.css",
+    "static/js/main.a53ef828.js"
   ]
 }
