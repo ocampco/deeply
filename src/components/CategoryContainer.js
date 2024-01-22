@@ -62,14 +62,14 @@ const CategoryContainer = () => {
     <>
       <h1>{TEXT_HEADING}</h1>
       <Date>{TEXT_DATE} {updateDate}</Date>
-      <ExternalLink
-        to={PATH_ADD_QUESTION}
-        title={TEXT_ADD_QUESTION}
-      >
-        <StyledButton secondary>
+      <StyledButton secondary>
+        <ExternalLink
+          to={PATH_ADD_QUESTION}
+          title={TEXT_ADD_QUESTION}
+        >
           <Add />{TEXT_ADD_QUESTION}
-        </StyledButton>
-      </ExternalLink>
+        </ExternalLink>
+      </StyledButton>
       <List>
         { categories.map(({
           url,

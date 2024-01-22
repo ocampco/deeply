@@ -31,7 +31,7 @@ const Description = styled.p`
   margin-bottom: 0.25rem;
 `;
 
-const LinkText = styled.p`
+const LinkText = styled.span`
   text-decoration: underline;
 `;
 
@@ -54,15 +54,15 @@ const Summary = () => (
       </h1>
       <Subheading>{TEXT_SUBHEADING}</Subheading>
       <Description>{TEXT_DESCRIPTION}</Description>
-      <ExternalLink
-        to={PATH_DONATE}
-        title={TEXT_LINK}
-      >
-        <LinkText>
-          <OpenExternalLink />
-          {TEXT_LINK}
-        </LinkText>
-      </ExternalLink>
+      <LinkText>
+        <ExternalLink
+          to={PATH_DONATE}
+          title={TEXT_LINK}
+        >
+        <OpenExternalLink />
+        {TEXT_LINK}
+        </ExternalLink>
+      </LinkText>
     </Content>
     <StyledNextLink to={`${PATH_CATEGORY}`}>
       {TEXT_BUTTON}

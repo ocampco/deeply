@@ -1,16 +1,22 @@
+import styled from 'styled-components';
+
+const Link = styled.a`
+  color: inherit;
+`;
+
 const ExternalLink = ({
   to,
   title,
   children,
 }) => (
-  <a
+  <Link
     href={to}
     title={title}
     target='_blank'
     rel='noopener noreferrer'
   >
     {children}
-  </a>
+  </Link>
 );
 
 export default ExternalLink;

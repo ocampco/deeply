@@ -7,14 +7,14 @@ const NextLink = ({
   secondary,
   children,
 }) => (
-  <Link to={to}>
-    <Button
-      className={className}
-      secondary={secondary}
-    >
+  <Button
+    className={className}
+    secondary={secondary}
+  >
+    <Link to={to}>
       {children}
-    </Button>
-  </Link>
+    </Link>
+  </Button>
 );
 
 export default NextLink;
